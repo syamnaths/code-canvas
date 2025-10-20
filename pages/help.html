@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en" class="h-full">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Help - CodeCanvas</title>
+    <script src="https://cdn.tailwindcss.com/3.4.1"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            fontFamily: {
+              sans: ['Inter', 'sans-serif'],
+            },
+          }
+        }
+      }
+    </script>
+</head>
+<body class="bg-slate-50 text-slate-800 flex flex-col h-full antialiased">
+
+    <!-- Header -->
+    <header class="bg-white border-b border-slate-200 flex-shrink-0">
+        <div class="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-16">
+                <div class="flex items-center gap-3">
+                    <div class="w-8 h-8 bg-indigo-600 text-white flex items-center justify-center rounded-lg font-bold text-lg">C</div>
+                    <h1 class="text-xl font-bold text-slate-900">CodeCanvas</h1>
+                </div>
+                <a href="../index.html" class="inline-flex items-center justify-center rounded-md text-sm font-medium transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:opacity-50 disabled:pointer-events-none ring-offset-background bg-indigo-600 text-white hover:bg-indigo-600/90 h-10 py-2 px-4">
+                    Back to Editor
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="flex-1 overflow-y-auto">
+        <div class="mx-auto max-w-5xl py-8 px-4 sm:px-6 lg:px-8">
+            <div class="mb-8">
+                <h2 class="text-3xl font-bold text-slate-900">Help & Documentation</h2>
+                <p class="mt-1 text-slate-600">Find answers to your questions about CodeCanvas.</p>
+            </div>
+
+            <div class="space-y-8">
+                <!-- How to Use Section -->
+                <section class="bg-white p-6 rounded-lg shadow-sm ring-1 ring-slate-900/5">
+                    <h3 class="text-xl font-semibold text-slate-900 border-b border-slate-200 pb-3">How to Use</h3>
+                    <article class="prose prose-slate mt-4">
+                        <p>Welcome to CodeCanvas! Using the platform is straightforward:</p>
+                        <ol>
+                            <li><strong>Select a Lesson:</strong> Choose a topic from the navigation sidebar on the left.</li>
+                            <li><strong>Read the Content:</strong> The lesson's explanation and instructions will appear in the main content area.</li>
+                            <li><strong>Practice Your Code:</strong> Use the "HTML & CSS Editor" to write your code. The initial code for the lesson is loaded for you automatically.</li>
+                            <li><strong>See Instant Results:</strong> Your code's output will render instantly in the "Live Preview" panel on the right.</li>
+                        </ol>
+                    </article>
+                </section>
+
+                <!-- Features Section -->
+                <section class="bg-white p-6 rounded-lg shadow-sm ring-1 ring-slate-900/5">
+                    <h3 class="text-xl font-semibold text-slate-900 border-b border-slate-200 pb-3">Features</h3>
+                     <article class="prose prose-slate mt-4">
+                        <ul>
+                            <li><strong>Interactive Editor:</strong> A split-screen view allows you to code and see your changes in real-time without leaving the page.</li>
+                            <li><strong>Dynamic Lessons:</strong> All lessons are loaded from a central <code>lessons.json</code> file, making the course content easy to update and expand.</li>
+                            <li><strong>Modern UI:</strong> Built with Tailwind CSS for a clean, responsive, and modern user interface that works on any device.</li>
+                        </ul>
+                    </article>
+                </section>
+                
+                <!-- FAQ Section -->
+                <section class="bg-white p-6 rounded-lg shadow-sm ring-1 ring-slate-900/5">
+                    <h3 class="text-xl font-semibold text-slate-900 border-b border-slate-200 pb-3">Frequently Asked Questions</h3>
+                    <div class="mt-4 space-y-4">
+                        <div>
+                            <h4 class="font-medium text-slate-800">Can I add my own lessons?</h4>
+                            <p class="text-sm text-slate-600 mt-1">Yes! You can edit the <code>assets/data/lessons.json</code> file directly. Simply copy the format of an existing lesson (title, content, initialCode) to add your own content.</p>
+                        </div>
+                        <div class="pt-4 border-t border-slate-100">
+                            <h4 class="font-medium text-slate-800">Is my code saved?</h4>
+                            <p class="text-sm text-slate-600 mt-1">Your code in the editor is not saved automatically between sessions in this version. Use the features on the <strong>Preferences</strong> page to export your lesson file if you want to save your progress.</p>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </div>
+    </main>
+
+</body>
+</html>

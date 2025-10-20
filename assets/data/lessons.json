@@ -1,0 +1,113 @@
+[
+  {
+    "title": "Part 1: HTML Fundamentals",
+    "isHeader": true
+  },
+  {
+    "title": "1. What is HTML?",
+    "content": "<p>Welcome to web development! HTML (HyperText Markup Language) is the standard language for creating web pages. Think of it as the skeleton that gives every website its structure. It uses 'tags' to define elements like headings, paragraphs, and links.</p><p>Every HTML document starts with a <code>&lt;!DOCTYPE html&gt;</code> declaration, followed by an <code>&lt;html&gt;</code> tag. Inside, the <code>&lt;head&gt;</code> holds metadata (like the page title), and the <code>&lt;body&gt;</code> holds all the visible content.</p>",
+    "initialCode": "<!DOCTYPE html>\n<html>\n<head>\n  <title>My First Page</title>\n</head>\n<body>\n  <h1>Hello, World!</h1>\n  <p>This is my first paragraph.</p>\n</body>\n</html>"
+  },
+  {
+    "title": "2. Text & Headings",
+    "content": "<p>Headings are defined with <code>&lt;h1&gt;</code> to <code>&lt;h6&gt;</code> tags. <code>&lt;h1&gt;</code> is the most important (and usually largest) heading, while <code>&lt;h6&gt;</code> is the least. Search engines use headings to index the structure of your web pages.</p><p>Paragraphs are created with the <code>&lt;p&gt;</code> tag. You can also use tags like <code>&lt;strong&gt;</code> for bold text and <code>&lt;em&gt;</code> for italicized text to add emphasis.</p>",
+    "initialCode": "<!DOCTYPE html>\n<html>\n<body>\n  <h1>Main Title</h1>\n  <h2>Subtitle</h2>\n  <p>This is a standard paragraph. You can make text <strong>bold</strong> or <em>italic</em> for emphasis.</p>\n</body>\n</html>"
+  },
+  {
+    "title": "3. Links & Images",
+    "content": "<p>Links (hyperlinks) are created with the <code>&lt;a&gt;</code> (anchor) tag. The <code>href</code> attribute is crucial—it specifies the destination URL.</p><p>Images are embedded using the <code>&lt;img&gt;</code> tag. It's a self-closing tag and requires the <code>src</code> attribute for the image path and the <code>alt</code> attribute for accessibility (it provides a text description if the image can't be loaded).</p>",
+    "initialCode": "<!DOCTYPE html>\n<html>\n<body>\n  <h1>Links & Images</h1>\n  <p>This is a link to a helpful resource:</p>\n  <a href=\"https://developer.mozilla.org/\">MDN Web Docs</a>\n  <h2>Here is an image:</h2>\n  <img src=\"https://picsum.photos/400/200\" alt=\"A random placeholder image\">\n</body>\n</html>"
+  },
+  {
+    "title": "4. Lists (Unordered & Ordered)",
+    "content": "<p>HTML offers two main list types. An unordered list (<code>&lt;ul&gt;</code>) is for items where the order doesn't matter, typically shown with bullets. An ordered list (<code>&lt;ol&gt;</code>) is for items where sequence is important, shown with numbers.</p><p>In both cases, each list item is defined with an <code>&lt;li&gt;</code> tag.</p>",
+    "initialCode": "<!DOCTYPE html>\n<html>\n<body>\n  <h2>Unordered List: Shopping List</h2>\n  <ul>\n    <li>Coffee</li>\n    <li>Tea</li>\n    <li>Milk</li>\n  </ul>\n  <h2>Ordered List: Top 3 Planets</h2>\n  <ol>\n    <li>Earth</li>\n    <li>Mars</li>\n    <li>Jupiter</li>\n  </ol>\n</body>\n</html>"
+  },
+  {
+    "title": "5. Tables",
+    "content": "<p>Tables are used to display data in rows and columns. A table starts with a <code>&lt;table&gt;</code> tag. Each row is defined with <code>&lt;tr&gt;</code>, table headers with <code>&lt;th&gt;</code>, and data cells with <code>&lt;td&gt;</code>.</p><p>Adding a simple border with CSS (as shown) makes tables much easier to read.</p>",
+    "initialCode": "<!DOCTYPE html>\n<html>\n<head>\n<style> table, th, td { border: 1px solid black; border-collapse: collapse; padding: 5px; } </style>\n</head>\n<body>\n  <h2>Employee Data</h2>\n  <table>\n    <tr>\n      <th>First Name</th>\n      <th>Last Name</th>\n    </tr>\n    <tr>\n      <td>John</td>\n      <td>Doe</td>\n    </tr>\n    <tr>\n      <td>Jane</td>\n      <td>Smith</td>\n    </tr>\n  </table>\n</body>\n</html>"
+  },
+    {
+    "title": "6. Forms & Inputs",
+    "content": "<p>Forms are used to collect user input. The <code>&lt;form&gt;</code> element is a container for different types of input elements, such as text fields, checkboxes, radio buttons, and submit buttons.</p><p>The <code>&lt;label&gt;</code> tag defines a label for many form elements, which improves accessibility. The <code>for</code> attribute of the label should be equal to the <code>id</code> of the input element.</p>",
+    "initialCode": "<!DOCTYPE html>\n<html>\n<body>\n<h2>Contact Us</h2>\n<form>\n  <label for=\"fname\">First name:</label><br>\n  <input type=\"text\" id=\"fname\" name=\"fname\"><br><br>\n  <label for=\"email\">Email:</label><br>\n  <input type=\"email\" id=\"email\" name=\"email\"><br><br>\n  <input type=\"submit\" value=\"Submit\">\n</form>\n</body>\n</html>"
+  },
+  {
+    "title": "7. Semantic HTML",
+    "content": "<p>Semantic HTML elements clearly describe their meaning to both the browser and the developer. This improves accessibility and SEO.</p><p>Examples include <code>&lt;header&gt;</code>, <code>&lt;nav&gt;</code>, <code>&lt;main&gt;</code>, <code>&lt;article&gt;</code>, <code>&lt;section&gt;</code>, and <code>&lt;footer&gt;</code>. They function like <code>&lt;div&gt;</code> elements but provide more context about your content.</p>",
+    "initialCode": "<!DOCTYPE html>\n<html>\n<head>\n<style> header, nav, main, footer { display: block; padding: 10px; margin: 5px; border: 1px solid gray; } </style>\n</head>\n<body>\n<header><h1>My Website</h1></header>\n<nav><a href=\"#\">Home</a> | <a href=\"#\">About</a></nav>\n<main>\n  <section><h2>Main Content</h2><p>This is where the primary content goes.</p></section>\n</main>\n<footer><p>Copyright 2025</p></footer>\n</body>\n</html>"
+  },
+  {
+    "title": "Part 2: CSS Fundamentals",
+    "isHeader": true
+  },
+  {
+    "title": "8. What is CSS?",
+    "content": "<p>CSS (Cascading Style Sheets) is the language we use to style an HTML document. It describes how HTML elements should be displayed on screen. You can add CSS directly into HTML using the <code>&lt;style&gt;</code> tag, typically placed in the <code>&lt;head&gt;</code>.</p><p>A CSS rule has a selector (e.g., <code>h1</code>) and a declaration block (e.g., <code>{ color: blue; }</code>).</p>",
+    "initialCode": "<!DOCTYPE html>\n<html>\n<head>\n  <style>\n    body {\n      font-family: sans-serif;\n      background-color: #f0f0f0;\n    }\n    h1 {\n      color: steelblue;\n      text-align: center;\n    }\n    p {\n      color: #555;\n    }\n  </style>\n</head>\n<body>\n  <h1>My First Styled Page</h1>\n  <p>This page has some basic styling!</p>\n</body>\n</html>"
+  },
+  {
+    "title": "9. Selectors (Class & ID)",
+    "content": "<p>To style specific elements, we use class and ID selectors.</p><ul><li><strong>Class Selector:</strong> Use a period (<code>.</code>) followed by the class name (e.g., <code>.highlight</code>). Classes are reusable and can be applied to many elements.</li><li><strong>ID Selector:</strong> Use a hash (<code>#</code>) followed by the id name (e.g., <code>#header</code>). IDs must be unique to a single element on the page.</li></ul>",
+    "initialCode": "<!DOCTYPE html>\n<html>\n<head>\n  <style>\n    .highlight-text {\n      background-color: yellow;\n      font-weight: bold;\n    }\n    #main-title {\n      border-bottom: 3px solid steelblue;\n      padding-bottom: 10px;\n    }\n  </style>\n</head>\n<body>\n  <h1 id=\"main-title\">A Unique Title</h1>\n  <p>This is a paragraph with <span class=\"highlight-text\">highlighted text</span>.</p>\n  <p class=\"highlight-text\">This entire paragraph is highlighted.</p>\n</body>\n</html>"
+  },
+  {
+    "title": "10. The Box Model",
+    "content": "<p>Every HTML element is a rectangular box. The CSS box model describes this concept. It consists of: margins, borders, padding, and the actual content.</p><ul><li><strong>Content:</strong> The text, image, etc.</li><li><strong>Padding:</strong> Transparent space between the content and the border.</li><li><strong>Border:</strong> A line that goes around the padding and content.</li><li><strong>Margin:</strong> Transparent space outside the border, separating it from other elements.</li></ul>",
+    "initialCode": "<!DOCTYPE html>\n<html>\n<head>\n  <style>\n    .box {\n      width: 300px;\n      background-color: #e0f7fa;\n      border: 10px solid #00796b;\n      padding: 40px;\n      margin: 25px auto; /* 'auto' horizontally centers block elements */\n      text-align: center;\n    }\n  </style>\n</head>\n<body>\n  <h2>The Box Model in Action</h2>\n  <div class=\"box\">This element has margin, border, and padding.</div>\n</body>\n</html>"
+  },
+  {
+    "title": "11. Colors & Backgrounds",
+    "content": "<p>CSS gives you full control over colors. Use <code>color</code> for text and <code>background-color</code> for the background of an element.</p><p>Colors can be specified by name (<code>red</code>), HEX codes (<code>#ff0000</code>), or RGB values (<code>rgb(255, 0, 0)</code>). HEX is most common for web design.</p><p>You can also set a <code>background-image</code> using a URL.</p>",
+    "initialCode": "<!DOCTYPE html>\n<html>\n<head>\n  <style>\n    body {\n      background-color: #111827; /* Dark Gray */\n      background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url(https://picsum.photos/1200/800);\n      background-size: cover;\n      color: #f3f4f6; /* Light Gray */\n      text-align: center;\n    }\n    h1 {\n      color: #60a5fa; /* A nice blue */\n    }\n    .panel {\n      background-color: rgba(31, 41, 55, 0.8);\n      border: 1px solid #374151;\n      padding: 20px;\n      margin: 20px auto;\n      width: 80%;\n      border-radius: 8px;\n    }\n  </style>\n</head>\n<body>\n  <h1>Dark Theme Design</h1>\n  <div class=\"panel\">\n    <p>This is a panel with a semi-transparent background color.</p>\n  </div>\n</body>\n</html>"
+  },
+    {
+    "title": "12. Typography",
+    "content": "<p>CSS gives you control over the appearance of text. Key properties include:</p><ul><li><code>font-family</code>: Specifies the font for an element (e.g., 'Arial', sans-serif).</li><li><code>font-size</code>: Sets the size of the text.</li><li><code>font-weight</code>: Sets how thick or thin characters in text should be displayed.</li><li><code>text-align</code>: Aligns the text in an element (left, right, center).</li><li><code>line-height</code>: Specifies the space between lines of text.</li></ul>",
+    "initialCode": "<!DOCTYPE html>\n<html>\n<head>\n  <style>\n    body { font-family: Georgia, serif; font-size: 18px; line-height: 1.6; }\n    h1 { font-family: 'Helvetica Neue', sans-serif; font-weight: bold; text-align: center; }\n    .custom-text { color: #800080; font-style: italic; }\n  </style>\n</head>\n<body>\n  <h1>Mastering Typography</h1>\n  <p>Good typography makes a website easier to read and more visually appealing. You can control many aspects of text, like creating <span class=\"custom-text\">custom styles for emphasis</span>.</p>\n</body>\n</html>"
+  },
+  {
+    "title": "Part 3: CSS Layout",
+    "isHeader": true
+  },
+  {
+    "title": "13. The Display Property",
+    "content": "<p>The <code>display</code> property is one of the most important in CSS. Key values include:</p><ul><li><code>block</code>: The element starts on a new line and takes up the full width available (e.g., <code>&lt;p&gt;</code>, <code>&lt;div&gt;</code>).</li><li><code>inline</code>: The element does not start on a new line and only takes up as much width as necessary (e.g., <code>&lt;span&gt;</code>, <code>&lt;a&gt;</code>).</li><li><code>inline-block</code>: Like inline, but you can set a width and height.</li><li><code>none</code>: The element is completely removed from the page.</li></ul>",
+    "initialCode": "<!DOCTYPE html>\n<html>\n<head>\n  <style>\n    nav a { display: inline-block; background: steelblue; color: white; padding: 10px 15px; margin: 5px; text-decoration: none; border-radius: 5px; }\n    .hidden { display: none; }\n  </style>\n</head>\n<body>\n  <nav>\n    <a href=\"#\">Home</a>\n    <a href=\"#\">About</a>\n    <a href=\"#\">Contact</a>\n  </nav>\n  <p>The navigation links above use 'inline-block'.</p>\n  <p class=\"hidden\">You can't see this paragraph!</p>\n</body>\n</html>"
+  },
+    {
+    "title": "14. Positioning",
+    "content": "<p>The <code>position</code> property specifies the type of positioning method used for an element. Values include:</p><ul><li><code>static</code>: Default value. Elements render in order, as they appear in the document flow.</li><li><code>relative</code>: The element is positioned relative to its normal position.</li><li><code>absolute</code>: The element is positioned relative to its nearest positioned ancestor.</li><li><code>fixed</code>: The element is positioned relative to the viewport, which means it always stays in the same place even if the page is scrolled.</li><li><code>sticky</code>: A hybrid of relative and fixed positioning.</li></ul>",
+    "initialCode": "<!DOCTYPE html>\n<html>\n<head>\n<style>\n  .fixed-button { position: fixed; bottom: 20px; right: 20px; background: orange; padding: 15px; border-radius: 50%; }\n  .container { position: relative; height: 300px; border: 2px solid black; }\n  .absolute-box { position: absolute; top: 40px; right: 0; width: 100px; height: 100px; background: lightblue; }\n</style>\n</head>\n<body>\n  <div class=\"container\">\n    This container is the positioning context for the blue box.\n    <div class=\"absolute-box\">Absolute</div>\n  </div>\n  <div class=\"fixed-button\">?</div>\n</body>\n</html>"
+  },
+  {
+    "title": "15. Introduction to Flexbox",
+    "content": "<p>Flexbox is a modern layout model for arranging items in a single dimension (a row or a column). To use it, create a 'flex container' by setting an element's <code>display</code> property to <code>flex</code>.</p><p>Use <code>justify-content</code> for horizontal alignment and <code>align-items</code> for vertical alignment on the container. Try changing their values to <code>center</code> or <code>space-between</code>.</p>",
+    "initialCode": "<!DOCTYPE html>\n<html>\n<head>\n  <style>\n    .container {\n      display: flex;\n      justify-content: space-around;\n      align-items: center;\n      background-color: #e5e7eb;\n      height: 250px;\n      padding: 10px;\n      border-radius: 8px;\n    }\n    .item {\n      background-color: #4f46e5;\n      color: white;\n      padding: 25px;\n      border-radius: 4px;\n      font-size: 20px;\n    }\n  </style>\n</head>\n<body>\n  <div class=\"container\">\n    <div class=\"item\">Item 1</div>\n    <div class=\"item\">Item 2</div>\n    <div class=\"item\">Item 3</div>\n  </div>\n</body>\n</html>"
+  },
+  {
+    "title": "16. Introduction to Grid",
+    "content": "<p>CSS Grid is a powerful 2-dimensional layout system, allowing you to control rows and columns simultaneously. Start by setting <code>display: grid</code> on a container.</p><p>Use <code>grid-template-columns</code> to define the number and size of columns. The <code>fr</code> unit represents a fraction of the available space, which is very useful for flexible layouts. Use <code>gap</code> to set the space between grid items.</p>",
+    "initialCode": "<!DOCTYPE html>\n<html>\n<head>\n  <style>\n    .grid-container {\n      display: grid;\n      grid-template-columns: repeat(3, 1fr); /* Three equal columns */\n      gap: 15px;\n      background-color: #f1f5f9;\n      padding: 15px;\n    }\n    .grid-item {\n      background-color: #2563eb;\n      color: white;\n      padding: 30px;\n      text-align: center;\n      font-size: 24px;\n      border-radius: 5px;\n    }\n  </style>\n</head>\n<body>\n  <div class=\"grid-container\">\n    <div class=\"grid-item\">1</div>\n    <div class=\"grid-item\">2</div>\n    <div class=\"grid-item\">3</div>\n    <div class=\"grid-item\">4</div>\n    <div class=\"grid-item\">5</div>\n    <div class=\"grid-item\">6</div>\n  </div>\n</body>\n</html>"
+  },
+  {
+    "title": "Part 4: Advanced CSS",
+    "isHeader": true
+  },
+  {
+    "title": "17. Pseudo-classes & Elements",
+    "content": "<p>Pseudo-classes are keywords added to selectors that specify a special state of the selected element(s). For example, <code>:hover</code> applies a style when you move your mouse over an element.</p><p>Pseudo-elements are keywords added to a selector that lets you style a specific part of the selected element(s). For example, <code>::before</code> creates a pseudo-element that is the first child of the selected element.</p>",
+    "initialCode": "<!DOCTYPE html>\n<html>\n<head>\n<style>\n  button { background-color: #2563eb; color: white; padding: 10px 20px; border: none; border-radius: 5px; cursor: pointer; }\n  button:hover { background-color: #1d4ed8; }\n  p::first-line { font-weight: bold; color: #15803d; }\n  a::after { content: ' (link)'; font-size: 0.8em; }\n</style>\n</head>\n<body>\n  <button>Hover Over Me</button>\n  <p>This is a paragraph. The first line of this text will be bold and green. The rest of the paragraph will be normal.</p>\n  <a href=\"#\">Example</a>\n</body>\n</html>"
+  },
+  {
+    "title": "18. Transitions",
+    "content": "<p>CSS transitions allow you to change property values smoothly (over a given duration). To create a transition effect, you must specify two things: the CSS property you want to add an effect to, and the duration of the effect.</p><p>In the example, we are transitioning the <code>background-color</code> and <code>transform</code> properties over 0.3 seconds.</p>",
+    "initialCode": "<!DOCTYPE html>\n<html>\n<head>\n<style>\n  .box {\n    width: 100px;\n    height: 100px;\n    background-color: red;\n    transition: background-color 0.3s, transform 0.3s;\n  }\n  .box:hover {\n    background-color: blue;\n    transform: rotate(45deg) scale(1.2);\n  }\n</style>\n</head>\n<body>\n  <div class=\"box\"></div>\n</body>\n</html>"
+  },
+  {
+    "title": "19. Responsive Design & Media Queries",
+    "content": "<p>Responsive web design makes your web pages look good on all devices (desktops, tablets, and phones). This is done using CSS Media Queries.</p><p>A media query applies a block of CSS only if a certain condition is true (e.g., the browser viewport is a certain width). The example below changes the flex direction from row to column on small screens, making the layout stack vertically.</p>",
+    "initialCode": "<!DOCTYPE html>\n<html>\n<head>\n  <style>\n    .container {\n      display: flex;\n      background: lightblue;\n      gap: 10px;\n      padding: 10px;\n    }\n    .box { flex: 1; padding: 20px; background: steelblue; color: white; text-align: center; border-radius: 5px; }\n\n    /* Media Query for screens 768px or less */\n    @media (max-width: 768px) {\n      .container {\n        flex-direction: column;\n      }\n    }\n  </style>\n</head>\n<body>\n  <p>Resize the browser window to see the layout change.</p>\n  <div class=\"container\">\n    <div class=\"box\">Box 1</div>\n    <div class=\"box\">Box 2</div>\n    <div class=\"box\">Box 3</div>\n  </div>\n</body>\n</html>"
+  }
+]

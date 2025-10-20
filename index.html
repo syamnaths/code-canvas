@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en" class="h-full">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CodeCanvas - Learn HTML & CSS</title>
+    <script src="https://cdn.tailwindcss.com/3.4.1"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            fontFamily: {
+              sans: ['Inter', 'sans-serif'],
+            },
+          }
+        }
+      }
+    </script>
+</head>
+<body class="bg-slate-50 text-slate-800 flex h-full antialiased">
+
+    <div class="flex w-full h-full">
+        <!-- Sidebar -->
+        <aside class="w-72 bg-white border-r border-slate-200 flex flex-col flex-shrink-0">
+            <div class="p-4 border-b border-slate-200 flex items-center gap-3">
+                <div class="w-8 h-8 bg-indigo-600 text-white flex items-center justify-center rounded-lg font-bold text-lg">C</div>
+                <h1 class="text-xl font-bold text-slate-900">CodeCanvas</h1>
+            </div>
+            <nav id="lesson-nav" class="flex-1 p-4 space-y-1">
+                <!-- Lessons will be dynamically inserted here -->
+                <div class="animate-pulse space-y-2">
+                    <div class="h-8 bg-slate-200 rounded-md"></div>
+                    <div class="h-8 bg-slate-200 rounded-md"></div>
+                    <div class="h-8 bg-slate-200 rounded-md w-2/3"></div>
+                </div>
+            </nav>
+            <div class="p-4 border-t border-slate-200 space-y-2">
+                <a href="./pages/preferences.html" class="block w-full text-left px-4 py-2 rounded-md text-slate-700 hover:bg-slate-100">Preferences</a>
+                 <a href="./pages/help.html" class="block w-full text-left px-4 py-2 rounded-md text-slate-700 hover:bg-slate-100">Help</a>
+            </div>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="flex-1 flex flex-col overflow-hidden">
+            <div id="content-area" class="flex-1 p-6 lg:p-8 overflow-y-auto">
+                <div id="lesson-content" class="bg-white p-6 rounded-lg shadow-sm ring-1 ring-slate-900/5">
+                     <h2 id="lesson-title" class="text-3xl font-bold mb-4 text-slate-900">Welcome to CodeCanvas!</h2>
+                     <article id="lesson-body" class="prose lg:prose-xl">
+                        <p>Select a lesson from the sidebar to begin your journey into web development. The content for the selected lesson will appear here, and you can practice your skills in the code editor below.</p>
+                     </article>
+                </div>
+
+                <!-- Interactive Area -->
+                <div class="mt-8">
+                    <h3 class="text-2xl font-semibold mb-4 text-slate-900">Practice Ground</h3>
+                    <div class="grid grid-cols-1 lg:grid-cols-2 gap-6 h-[400px]">
+                        <div>
+                            <label for="editor" class="block text-sm font-medium text-slate-700 mb-2">HTML & CSS Editor</label>
+                            <textarea id="editor" spellcheck="false" class="w-full h-full p-4 border border-slate-300 rounded-lg bg-slate-900 text-slate-50 font-mono text-sm resize-none focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500"></textarea>
+                        </div>
+                        <div class="flex flex-col h-full">
+                            <label for="preview" class="block text-sm font-medium text-slate-700 mb-2">Live Preview</label>
+                            <iframe id="preview" class="w-full flex-1 border border-slate-300 rounded-lg bg-white"></iframe>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <script src="./assets/js/app.js"></script>
+</body>
+</html>

@@ -1,0 +1,42 @@
+/* Custom Scrollbar Styling */
+/* Works on Firefox */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: #a5b4fc #e0e7ff;
+}
+
+/* Works on Chrome, Edge, and Safari */
+*::-webkit-scrollbar {
+  width: 12px;
+}
+
+*::-webkit-scrollbar-track {
+  background: #e0e7ff;
+  border-radius: 20px;
+}
+
+*::-webkit-scrollbar-thumb {
+  background-color: #a5b4fc;
+  border-radius: 20px;
+  border: 3px solid #e0e7ff;
+}
+
+/* Prose customizations for lesson content */
+.prose {
+    max-width: none; /* Disabling the max-width for our layout */
+}
+
+.prose code {
+    background-color: #eef2ff;
+    color: #4338ca;
+    padding: 0.2em 0.4em;
+    margin: 0;
+    font-size: 85%;
+    border-radius: 6px;
+    font-weight: 600;
+}
+
+.prose pre {
+    background-color: #1e293b !important;
+    color: #e2e8f0 !important;
+}

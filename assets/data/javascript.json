@@ -1,0 +1,65 @@
+[
+  {
+    "title": "Part 1: JavaScript Fundamentals",
+    "isHeader": true
+  },
+  {
+    "title": "1. What is JavaScript?",
+    "content": "<p>JavaScript is the programming language of the web. It allows you to create dynamically updating content, control multimedia, animate images, and much more. You write JavaScript code inside <code>&lt;script&gt;</code> tags.</p><p>The <code>console.log()</code> function is a developer's best friend. It prints messages to the web console (you can open it in your browser with F12 or Cmd+Option+I).</p>",
+    "initialCode": "<!DOCTYPE html>\n<html>\n<body>\n  <h1>Check the Console!</h1>\n\n  <script>\n    // This is a comment in JavaScript\n    console.log('Hello from JavaScript!');\n  </script>\n</body>\n</html>"
+  },
+  {
+    "title": "2. Variables & Data Types",
+    "content": "<p>Variables are containers for storing data values. In modern JS, we use <code>let</code> for variables that can be reassigned and <code>const</code> for variables that cannot.</p><p>Common data types include <strong>Strings</strong> (text), <strong>Numbers</strong>, and <strong>Booleans</strong> (true or false).</p>",
+    "initialCode": "<!DOCTYPE html>\n<html>\n<body>\n  <h1>JavaScript Variables</h1>\n\n  <script>\n    let name = 'Alice'; // A string\n    const age = 30; // A number\n    let isStudent = true; // A boolean\n\n    console.log('Name:', name);\n    console.log('Age:', age);\n    console.log('Is a student?', isStudent);\n\n    name = 'Bob'; // 'let' can be changed\n    // age = 31; // This would cause an error because 'age' is a const\n    console.log('Name is now:', name);\n  </script>\n</body>\n</html>"
+  },
+  {
+    "title": "3. Functions",
+    "content": "<p>A function is a block of code designed to perform a particular task. A function is executed when 'something' invokes it (calls it).</p><p>Functions can take in parameters (inputs) and can <code>return</code> a value (output). This makes your code reusable and organized.</p>",
+    "initialCode": "<!DOCTYPE html>\n<html>\n<body>\n  <h1>JavaScript Functions</h1>\n\n  <script>\n    // Defining a function\n    function greet(name) {\n      return 'Hello, ' + name + '!';\n    }\n\n    // Calling the function\n    let message = greet('World');\n    console.log(message);\n\n    console.log(greet('Alice')); // Calling it again with a different input\n  </script>\n</body>\n</html>"
+  },
+  {
+    "title": "4. Conditionals (If/Else)",
+    "content": "<p>Conditional statements are used to perform different actions based on different conditions. The <code>if...else</code> statement executes a block of code if a specified condition is true, and another block if the condition is false.</p>",
+    "initialCode": "<!DOCTYPE html>\n<html>\n<body>\n  <h1>JavaScript Conditionals</h1>\n\n  <script>\n    const hour = 14;\n\n    if (hour < 12) {\n      console.log('Good morning!');\n    } else if (hour < 18) {\n      console.log('Good afternoon!');\n    } else {\n      console.log('Good evening!');\n    }\n  </script>\n</body>\n</html>"
+  },
+    {
+    "title": "5. Arrays",
+    "content": "<p>An array is a special variable, which can hold more than one value at a time. Arrays are used to store lists of items. You can access items in an array by referring to the index number (starting from 0).</p><p>You can find the number of items in an array using the <code>length</code> property.</p>",
+    "initialCode": "<!DOCTYPE html>\n<html>\n<body>\n  <h1>JavaScript Arrays</h1>\n\n  <script>\n    const fruits = ['Apple', 'Banana', 'Cherry'];\n\n    console.log(fruits); // Logs the whole array\n    console.log(fruits[0]); // Logs 'Apple'\n    console.log('Number of fruits:', fruits.length);\n\n    fruits.push('Orange'); // Add a new item to the end\n    console.log(fruits);\n  </script>\n</body>\n</html>"
+  },
+  {
+    "title": "6. Loops",
+    "content": "<p>Loops can execute a block of code a number of times. The <code>for</code> loop is the most common way to iterate over an array.</p><p>A <code>for</code> loop repeats until a specified condition evaluates to false. It has three parts: the initialization, the condition, and the afterthought (usually an increment).</p>",
+    "initialCode": "<!DOCTYPE html>\n<html>\n<body>\n  <h1>JavaScript Loops</h1>\n\n  <script>\n    const colors = ['Red', 'Green', 'Blue', 'Yellow'];\n\n    // Loop through the array\n    for (let i = 0; i < colors.length; i++) {\n      console.log('Color at index ' + i + ' is ' + colors[i]);\n    }\n  </script>\n</body>\n</html>"
+  },
+  {
+    "title": "Part 2: JavaScript & The DOM",
+    "isHeader": true
+  },
+  {
+    "title": "7. The DOM",
+    "content": "<p>The DOM (Document Object Model) is a programming interface for web documents. It represents the page so that programs can change the document structure, style, and content. The DOM represents the document as a tree of objects.</p><p>JavaScript can be used to manipulate this tree, allowing us to make our web pages interactive.</p>",
+    "initialCode": "<!DOCTYPE html>\n<html>\n<body>\n  <h1 id=\"main-title\">The Document Object Model</h1>\n  <p>JavaScript can interact with all the elements on this page.</p>\n\n  <script>\n    // We'll learn how to select these elements next!\n    console.log('The DOM is ready!');\n  </script>\n</body>\n</html>"
+  },
+  {
+    "title": "8. Selecting Elements",
+    "content": "<p>To interact with an HTML element, you first need to select it. The most common methods are:</p><ul><li><code>document.getElementById('id')</code>: Selects a single element by its unique ID.</li><li><code>document.querySelector('selector')</code>: Selects the first element that matches a CSS selector (e.g., '#id', '.class', 'tag').</li><li><code>document.querySelectorAll('selector')</code>: Selects all elements that match a CSS selector and returns them in a list.</li></ul>",
+    "initialCode": "<!DOCTYPE html>\n<html>\n<body>\n  <h1 id=\"title\">Hello!</h1>\n  <p class=\"content\">This is some content.</p>\n  <p class=\"content\">This is more content.</p>\n\n  <script>\n    const titleElement = document.getElementById('title');\n    const pElement = document.querySelector('.content'); // Gets the first one\n    const all_pElements = document.querySelectorAll('.content'); // Gets all of them\n\n    console.log(titleElement);\n    console.log(pElement);\n    console.log(all_pElements);\n  </script>\n</body>\n</html>"
+  },
+  {
+    "title": "9. Manipulating Elements",
+    "content": "<p>Once you've selected an element, you can change its content, style, and attributes.</p><ul><li><code>element.textContent</code>: Changes the text content of an element.</li><li><code>element.innerHTML</code>: Changes the HTML content (including tags) within an element.</li><li><code>element.style.property</code>: Changes a specific CSS style (e.g., <code>element.style.color = 'red'</code>).</li><li><code>element.classList.add('new-class')</code>: Adds a CSS class to an element.</li></ul>",
+    "initialCode": "<!DOCTYPE html>\n<html>\n<head>\n  <style> .highlight { background-color: yellow; font-size: 20px; } </style>\n</head>\n<body>\n  <h1 id=\"heading\">Original Heading</h1>\n  <p id=\"paragraph\">Original paragraph.</p>\n\n  <script>\n    const heading = document.getElementById('heading');\n    const paragraph = document.getElementById('paragraph');\n\n    // Change text content and style\n    heading.textContent = 'New Heading!';\n    heading.style.color = 'blue';\n\n    // Add a class\n    paragraph.classList.add('highlight');\n  </script>\n</body>\n</html>"
+  },
+  {
+    "title": "10. Handling Events",
+    "content": "<p>JavaScript can react to user actions, like clicks, mouse movements, and key presses. This is called event handling.</p><p>The modern way to handle events is with the <code>addEventListener()</code> method. You tell it what event to listen for (e.g., 'click') and what function to run when the event happens.</p>",
+    "initialCode": "<!DOCTYPE html>\n<html>\n<head>\n  <style> button { padding: 10px 20px; font-size: 16px; } </style>\n</head>\n<body>\n  <button id=\"my-button\">Click Me!</button>\n  <p id=\"message\"></p>\n\n  <script>\n    const button = document.getElementById('my-button');\n    const message = document.getElementById('message');\n\n    button.addEventListener('click', function() {\n      message.textContent = 'Button was clicked at ' + new Date().toLocaleTimeString();\n      message.style.color = 'green';\n    });\n  </script>\n</body>\n</html>"
+  },
+    {
+    "title": "11. Creating & Appending Elements",
+    "content": "<p>You can create new HTML elements from scratch using JavaScript and add them to the DOM.</p><ul><li><code>document.createElement('tagName')</code>: Creates a new element.</li><li><code>element.textContent</code>: Sets the text inside the new element.</li><li><code>parentElement.appendChild(newElement)</code>: Adds the new element as a child of the parent element.</li></ul>",
+    "initialCode": "<!DOCTYPE html>\n<html>\n<body>\n  <div id=\"container\"></div>\n  <button id=\"add-item-btn\">Add Item</button>\n\n  <script>\n    const container = document.getElementById('container');\n    const button = document.getElementById('add-item-btn');\n    let itemCount = 0;\n\n    button.addEventListener('click', () => {\n      itemCount++;\n      const newItem = document.createElement('p');\n      newItem.textContent = 'This is item number ' + itemCount;\n      newItem.style.margin = '5px';\n      newItem.style.padding = '10px';\n      newItem.style.backgroundColor = '#eee';\n      container.appendChild(newItem);\n    });\n  </script>\n</body>\n</html>"
+  }
+]
