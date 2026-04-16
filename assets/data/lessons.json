@@ -147,7 +147,7 @@
   },
   {
     "title": "27. CSS Variables",
-    "content": "<p>CSS Variables (Custom Properties) allow you to store values and reuse them throughout your stylesheet. They start with <code>--</code> and are accessed using the <code>var()</code> function.</p>",
+    "content": "<p>CSS Variables (Custom Properties) allow you to store values and reuse them throughout your stylesheet. They start with <code>--</code> and are accessed using the <code>var()</code> function.</p><p>We typically define variables inside the <code>:root</code> selector. <code>:root</code> matches the highest-level element in the document (usually the <code>&lt;html&gt;</code> tag), making those variables 'global' and available to every other element on the page.</p>",
     "initialCode": "<!DOCTYPE html>\n<html>\n<head>\n<style>\n  :root {\n    --primary-color: #6366f1;\n    --secondary-color: #a855f7;\n    --padding: 20px;\n  }\n  .card {\n    background: var(--primary-color);\n    color: white;\n    padding: var(--padding);\n    border-radius: 10px;\n    box-shadow: 0 4px 6px var(--secondary-color);\n  }\n</style>\n</head>\n<body>\n  <div class=\"card\">Styled with CSS Variables</div>\n</body>\n</html>"
   },
   {
