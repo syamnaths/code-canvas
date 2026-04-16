@@ -39,75 +39,135 @@
     "initialCode": "<!DOCTYPE html>\n<html>\n<head>\n<style> header, nav, main, footer { display: block; padding: 10px; margin: 5px; border: 1px solid gray; } </style>\n</head>\n<body>\n<header><h1>My Website</h1></header>\n<nav><a href=\"#\">Home</a> | <a href=\"#\">About</a></nav>\n<main>\n  <section><h2>Main Content</h2><p>This is where the primary content goes.</p></section>\n</main>\n<footer><p>Copyright 2025</p></footer>\n</body>\n</html>"
   },
   {
+    "title": "8. Accessibility & ARIA",
+    "content": "<p>Accessibility (A11y) ensures that websites can be used by everyone, including people with disabilities. ARIA (Accessible Rich Internet Applications) attributes help provide extra context to screen readers when standard HTML isn't enough.</p><p>Key practices include using <code>alt</code> text for images, high contrast colors, and <code>aria-label</code> for elements that don't have visible text.</p>",
+    "initialCode": "<!DOCTYPE html>\n<html>\n<body>\n  <h1>Accessible Web Design</h1>\n  <nav aria-label=\"Main Navigation\">\n    <ul>\n      <li><a href=\"#\">Home</a></li>\n      <li><button aria-label=\"Close modal\">X</button></li>\n    </ul>\n  </nav>\n  <img src=\"https://picsum.photos/200\" alt=\"A beautiful sunset over the mountains\">\n</body>\n</html>"
+  },
+  {
     "title": "Part 2: CSS Fundamentals",
     "isHeader": true
   },
   {
-    "title": "8. What is CSS?",
+    "title": "9. What is CSS?",
     "content": "<p>CSS (Cascading Style Sheets) is the language we use to style an HTML document. It describes how HTML elements should be displayed on screen. You can add CSS directly into HTML using the <code>&lt;style&gt;</code> tag, typically placed in the <code>&lt;head&gt;</code>.</p><p>A CSS rule has a selector (e.g., <code>h1</code>) and a declaration block (e.g., <code>{ color: blue; }</code>).</p>",
     "initialCode": "<!DOCTYPE html>\n<html>\n<head>\n  <style>\n    body {\n      font-family: sans-serif;\n      background-color: #f0f0f0;\n    }\n    h1 {\n      color: steelblue;\n      text-align: center;\n    }\n    p {\n      color: #555;\n    }\n  </style>\n</head>\n<body>\n  <h1>My First Styled Page</h1>\n  <p>This page has some basic styling!</p>\n</body>\n</html>"
   },
   {
-    "title": "9. Selectors (Class & ID)",
+    "title": "10. Selectors (Class & ID)",
     "content": "<p>To style specific elements, we use class and ID selectors.</p><ul><li><strong>Class Selector:</strong> Use a period (<code>.</code>) followed by the class name (e.g., <code>.highlight</code>). Classes are reusable and can be applied to many elements.</li><li><strong>ID Selector:</strong> Use a hash (<code>#</code>) followed by the id name (e.g., <code>#header</code>). IDs must be unique to a single element on the page.</li></ul>",
     "initialCode": "<!DOCTYPE html>\n<html>\n<head>\n  <style>\n    .highlight-text {\n      background-color: yellow;\n      font-weight: bold;\n    }\n    #main-title {\n      border-bottom: 3px solid steelblue;\n      padding-bottom: 10px;\n    }\n  </style>\n</head>\n<body>\n  <h1 id=\"main-title\">A Unique Title</h1>\n  <p>This is a paragraph with <span class=\"highlight-text\">highlighted text</span>.</p>\n  <p class=\"highlight-text\">This entire paragraph is highlighted.</p>\n</body>\n</html>"
   },
   {
-    "title": "10. The Box Model",
+    "title": "11. The Box Model",
     "content": "<p>Every HTML element is a rectangular box. The CSS box model describes this concept. It consists of: margins, borders, padding, and the actual content.</p><ul><li><strong>Content:</strong> The text, image, etc.</li><li><strong>Padding:</strong> Transparent space between the content and the border.</li><li><strong>Border:</strong> A line that goes around the padding and content.</li><li><strong>Margin:</strong> Transparent space outside the border, separating it from other elements.</li></ul>",
     "initialCode": "<!DOCTYPE html>\n<html>\n<head>\n  <style>\n    .box {\n      width: 300px;\n      background-color: #e0f7fa;\n      border: 10px solid #00796b;\n      padding: 40px;\n      margin: 25px auto; /* 'auto' horizontally centers block elements */\n      text-align: center;\n    }\n  </style>\n</head>\n<body>\n  <h2>The Box Model in Action</h2>\n  <div class=\"box\">This element has margin, border, and padding.</div>\n</body>\n</html>"
   },
   {
-    "title": "11. Colors & Backgrounds",
+    "title": "12. Colors & Backgrounds",
     "content": "<p>CSS gives you full control over colors. Use <code>color</code> for text and <code>background-color</code> for the background of an element.</p><p>Colors can be specified by name (<code>red</code>), HEX codes (<code>#ff0000</code>), or RGB values (<code>rgb(255, 0, 0)</code>). HEX is most common for web design.</p><p>You can also set a <code>background-image</code> using a URL.</p>",
     "initialCode": "<!DOCTYPE html>\n<html>\n<head>\n  <style>\n    body {\n      background-color: #111827; /* Dark Gray */\n      background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url(https://picsum.photos/1200/800);\n      background-size: cover;\n      color: #f3f4f6; /* Light Gray */\n      text-align: center;\n    }\n    h1 {\n      color: #60a5fa; /* A nice blue */\n    }\n    .panel {\n      background-color: rgba(31, 41, 55, 0.8);\n      border: 1px solid #374151;\n      padding: 20px;\n      margin: 20px auto;\n      width: 80%;\n      border-radius: 8px;\n    }\n  </style>\n</head>\n<body>\n  <h1>Dark Theme Design</h1>\n  <div class=\"panel\">\n    <p>This is a panel with a semi-transparent background color.</p>\n  </div>\n</body>\n</html>"
   },
     {
-    "title": "12. Typography",
+    "title": "13. Typography",
     "content": "<p>CSS gives you control over the appearance of text. Key properties include:</p><ul><li><code>font-family</code>: Specifies the font for an element (e.g., 'Arial', sans-serif).</li><li><code>font-size</code>: Sets the size of the text.</li><li><code>font-weight</code>: Sets how thick or thin characters in text should be displayed.</li><li><code>text-align</code>: Aligns the text in an element (left, right, center).</li><li><code>line-height</code>: Specifies the space between lines of text.</li></ul>",
     "initialCode": "<!DOCTYPE html>\n<html>\n<head>\n  <style>\n    body { font-family: Georgia, serif; font-size: 18px; line-height: 1.6; }\n    h1 { font-family: 'Helvetica Neue', sans-serif; font-weight: bold; text-align: center; }\n    .custom-text { color: #800080; font-style: italic; }\n  </style>\n</head>\n<body>\n  <h1>Mastering Typography</h1>\n  <p>Good typography makes a website easier to read and more visually appealing. You can control many aspects of text, like creating <span class=\"custom-text\">custom styles for emphasis</span>.</p>\n</body>\n</html>"
+  },
+  {
+    "title": "14. Object-fit & Object-position",
+    "content": "<p>The <code>object-fit</code> property defines how an <code>&lt;img&gt;</code> or <code>&lt;video&gt;</code> should be resized to fit its container. This is crucial for maintaining aspect ratios without distortion.</p><ul><li><code>cover</code>: Fills the container, cropping the image if necessary.</li><li><code>contain</code>: Shows the whole image within the container, adding space if needed.</li><li><code>fill</code>: Stretches the image to fill the container (distortion likely).</li></ul>",
+    "initialCode": "<!DOCTYPE html>\n<html>\n<head>\n  <style>\n    .container { width: 300px; height: 200px; border: 2px solid black; overflow: hidden; margin-bottom: 10px; }\n    img { width: 100%; height: 100%; object-fit: cover; }\n    .contain img { object-fit: contain; }\n  </style>\n</head>\n<body>\n  <h3>Object-fit: Cover</h3>\n  <div class=\"container\">\n    <img src=\"https://picsum.photos/600/600\" alt=\"Square image in rectangular container\">\n  </div>\n  <h3>Object-fit: Contain</h3>\n  <div class=\"container contain\">\n    <img src=\"https://picsum.photos/600/600\" alt=\"Square image in rectangular container\">\n  </div>\n</body>\n</html>"
   },
   {
     "title": "Part 3: CSS Layout",
     "isHeader": true
   },
   {
-    "title": "13. The Display Property",
+    "title": "15. The Display Property",
     "content": "<p>The <code>display</code> property is one of the most important in CSS. Key values include:</p><ul><li><code>block</code>: The element starts on a new line and takes up the full width available (e.g., <code>&lt;p&gt;</code>, <code>&lt;div&gt;</code>).</li><li><code>inline</code>: The element does not start on a new line and only takes up as much width as necessary (e.g., <code>&lt;span&gt;</code>, <code>&lt;a&gt;</code>).</li><li><code>inline-block</code>: Like inline, but you can set a width and height.</li><li><code>none</code>: The element is completely removed from the page.</li></ul>",
     "initialCode": "<!DOCTYPE html>\n<html>\n<head>\n  <style>\n    nav a { display: inline-block; background: steelblue; color: white; padding: 10px 15px; margin: 5px; text-decoration: none; border-radius: 5px; }\n    .hidden { display: none; }\n  </style>\n</head>\n<body>\n  <nav>\n    <a href=\"#\">Home</a>\n    <a href=\"#\">About</a>\n    <a href=\"#\">Contact</a>\n  </nav>\n  <p>The navigation links above use 'inline-block'.</p>\n  <p class=\"hidden\">You can't see this paragraph!</p>\n</body>\n</html>"
   },
+  {
+    "title": "16. Floats & Clearing",
+    "content": "<p>Before Flexbox and Grid, <code>float</code> was used for layout. It pushes an element to the left or right, allowing text and other elements to wrap around it.</p><p>Crucially, floated elements are removed from the normal document flow, which can cause containers to collapse. Use <code>clear: both</code> or a 'clearfix' to fix this.</p>",
+    "initialCode": "<!DOCTYPE html>\n<html>\n<head>\n<style>\n  .box { width: 150px; height: 100px; background: lightcoral; margin: 10px; }\n  .float-left { float: left; }\n  .clearfix::after { content: ''; display: table; clear: both; }\n  .container { border: 2px solid black; background: #eee; }\n</style>\n</head>\n<body>\n  <div class=\"container clearfix\">\n    <div class=\"box float-left\">I am floated left</div>\n    <p>This text will wrap around the floated box. If the container didn't have the 'clearfix' class, it would collapse because it wouldn't 'see' the floated box.</p>\n  </div>\n</body>\n</html>"
+  },
     {
-    "title": "14. Positioning",
+    "title": "17. Positioning",
     "content": "<p>The <code>position</code> property specifies the type of positioning method used for an element. Values include:</p><ul><li><code>static</code>: Default value. Elements render in order, as they appear in the document flow.</li><li><code>relative</code>: The element is positioned relative to its normal position.</li><li><code>absolute</code>: The element is positioned relative to its nearest positioned ancestor.</li><li><code>fixed</code>: The element is positioned relative to the viewport, which means it always stays in the same place even if the page is scrolled.</li><li><code>sticky</code>: A hybrid of relative and fixed positioning.</li></ul>",
-    "initialCode": "<!DOCTYPE html>\n<html>\n<head>\n<style>\n  .fixed-button { position: fixed; bottom: 20px; right: 20px; background: orange; padding: 15px; border-radius: 50%; }\n  .container { position: relative; height: 300px; border: 2px solid black; }\n  .absolute-box { position: absolute; top: 40px; right: 0; width: 100px; height: 100px; background: lightblue; }\n</style>\n</head>\n<body>\n  <div class=\"container\">\n    This container is the positioning context for the blue box.\n    <div class=\"absolute-box\">Absolute</div>\n  </div>\n  <div class=\"fixed-button\">?</div>\n</body>\n</html>"
+    "initialCode": "<!DOCTYPE html>\n<html>\n<head>\n<style>\n  .fixed-button { position: fixed; bottom: 20px; right: 20px; background: orange; padding: 15px; border-radius: 50%; z-index: 100; }\n  .container { position: relative; height: 300px; border: 2px solid black; }\n  .absolute-box { position: absolute; top: 40px; right: 0; width: 100px; height: 100px; background: lightblue; }\n</style>\n</head>\n<body>\n  <div class=\"container\">\n    This container is the positioning context for the blue box.\n    <div class=\"absolute-box\">Absolute</div>\n  </div>\n  <div class=\"fixed-button\">?</div>\n</body>\n</html>"
   },
   {
-    "title": "15. Introduction to Flexbox",
+    "title": "18. Z-Index & Stacking Context",
+    "content": "<p>The <code>z-index</code> property controls the vertical stacking order of elements that overlap. An element with a higher z-index will appear on top of one with a lower z-index.</p><p>Note: <code>z-index</code> only works on elements that have a <code>position</code> value other than <code>static</code>.</p>",
+    "initialCode": "<!DOCTYPE html>\n<html>\n<head>\n<style>\n  .box { width: 100px; height: 100px; position: absolute; color: white; padding: 10px; }\n  .red { background: red; top: 20px; left: 20px; z-index: 2; }\n  .blue { background: blue; top: 50px; left: 50px; z-index: 1; }\n</style>\n</head>\n<body>\n  <div style=\"position: relative; height: 200px;\">\n    <div class=\"box red\">Z-index: 2</div>\n    <div class=\"box blue\">Z-index: 1</div>\n  </div>\n</body>\n</html>"
+  },
+  {
+    "title": "19. Introduction to Flexbox",
     "content": "<p>Flexbox is a modern layout model for arranging items in a single dimension (a row or a column). To use it, create a 'flex container' by setting an element's <code>display</code> property to <code>flex</code>.</p><p>Use <code>justify-content</code> for horizontal alignment and <code>align-items</code> for vertical alignment on the container. Try changing their values to <code>center</code> or <code>space-between</code>.</p>",
     "initialCode": "<!DOCTYPE html>\n<html>\n<head>\n  <style>\n    .container {\n      display: flex;\n      justify-content: space-around;\n      align-items: center;\n      background-color: #e5e7eb;\n      height: 250px;\n      padding: 10px;\n      border-radius: 8px;\n    }\n    .item {\n      background-color: #4f46e5;\n      color: white;\n      padding: 25px;\n      border-radius: 4px;\n      font-size: 20px;\n    }\n  </style>\n</head>\n<body>\n  <div class=\"container\">\n    <div class=\"item\">Item 1</div>\n    <div class=\"item\">Item 2</div>\n    <div class=\"item\">Item 3</div>\n  </div>\n</body>\n</html>"
   },
   {
-    "title": "16. Introduction to Grid",
+    "title": "20. Advanced Flexbox (Autolayout)",
+    "content": "<p>Beyond alignment, Flexbox allows items to grow or shrink to fill space. This is often called 'Autolayout' in design tools.</p><ul><li><code>flex-grow</code>: How much an item should grow relative to others.</li><li><code>flex-shrink</code>: How much an item should shrink if space is tight.</li><li><code>flex-basis</code>: The initial size of an item.</li><li><code>gap</code>: The space between items.</li></ul>",
+    "initialCode": "<!DOCTYPE html>\n<html>\n<head>\n<style>\n  .container { display: flex; gap: 20px; background: #eee; padding: 20px; }\n  .item { background: #4f46e5; color: white; padding: 20px; }\n  .grow { flex-grow: 1; background: #ec4899; } /* This item will take up all remaining space */\n</style>\n</head>\n<body>\n  <div class=\"container\">\n    <div class=\"item\">Fixed</div>\n    <div class=\"item grow\">I Grow!</div>\n    <div class=\"item\">Fixed</div>\n  </div>\n</body>\n</html>"
+  },
+  {
+    "title": "21. Introduction to Grid",
     "content": "<p>CSS Grid is a powerful 2-dimensional layout system, allowing you to control rows and columns simultaneously. Start by setting <code>display: grid</code> on a container.</p><p>Use <code>grid-template-columns</code> to define the number and size of columns. The <code>fr</code> unit represents a fraction of the available space, which is very useful for flexible layouts. Use <code>gap</code> to set the space between grid items.</p>",
     "initialCode": "<!DOCTYPE html>\n<html>\n<head>\n  <style>\n    .grid-container {\n      display: grid;\n      grid-template-columns: repeat(3, 1fr); /* Three equal columns */\n      gap: 15px;\n      background-color: #f1f5f9;\n      padding: 15px;\n    }\n    .grid-item {\n      background-color: #2563eb;\n      color: white;\n      padding: 30px;\n      text-align: center;\n      font-size: 24px;\n      border-radius: 5px;\n    }\n  </style>\n</head>\n<body>\n  <div class=\"grid-container\">\n    <div class=\"grid-item\">1</div>\n    <div class=\"grid-item\">2</div>\n    <div class=\"grid-item\">3</div>\n    <div class=\"grid-item\">4</div>\n    <div class=\"grid-item\">5</div>\n    <div class=\"grid-item\">6</div>\n  </div>\n</body>\n</html>"
+  },
+  {
+    "title": "22. Advanced Grid",
+    "content": "<p>CSS Grid can create complex layouts easily using <code>grid-template-areas</code> or <code>auto-fit/auto-fill</code> with <code>minmax()</code> for responsive designs without media queries.</p><p>In the example below, the grid will automatically add as many columns as possible that are at least 200px wide.</p>",
+    "initialCode": "<!DOCTYPE html>\n<html>\n<head>\n<style>\n  .grid {\n    display: grid;\n    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));\n    gap: 10px;\n  }\n  .item { background: #10b981; color: white; padding: 40px; text-align: center; }\n</style>\n</head>\n<body>\n  <div class=\"grid\">\n    <div class=\"item\">Card 1</div>\n    <div class=\"item\">Card 2</div>\n    <div class=\"item\">Card 3</div>\n    <div class=\"item\">Card 4</div>\n  </div>\n</body>\n</html>"
+  },
+  {
+    "title": "23. The 'Auto' Keyword & Aspect Ratio",
+    "content": "<p>The <code>auto</code> keyword is powerful for margins (e.g., <code>margin: auto</code> for centering) and sizes. Additionally, the <code>aspect-ratio</code> property ensures elements maintain a specific shape (like 16/9 for video) regardless of width.</p>",
+    "initialCode": "<!DOCTYPE html>\n<html>\n<head>\n<style>\n  .centered-box {\n    width: 200px;\n    margin: 40px auto; /* Centers horizontally */\n    background: gold;\n    padding: 20px;\n    text-align: center;\n  }\n  .video-placeholder {\n    width: 100%;\n    aspect-ratio: 16 / 9;\n    background: #333;\n    color: white;\n    display: flex;\n    align-items: center;\n    justify-content: center;\n  }\n</style>\n</head>\n<body>\n  <div class=\"centered-box\">I am centered!</div>\n  <div class=\"video-placeholder\">16:9 Aspect Ratio</div>\n</body>\n</html>"
   },
   {
     "title": "Part 4: Advanced CSS",
     "isHeader": true
   },
   {
-    "title": "17. Pseudo-classes & Elements",
+    "title": "24. Pseudo-classes & Elements",
     "content": "<p>Pseudo-classes are keywords added to selectors that specify a special state of the selected element(s). For example, <code>:hover</code> applies a style when you move your mouse over an element.</p><p>Pseudo-elements are keywords added to a selector that lets you style a specific part of the selected element(s). For example, <code>::before</code> creates a pseudo-element that is the first child of the selected element.</p>",
     "initialCode": "<!DOCTYPE html>\n<html>\n<head>\n<style>\n  button { background-color: #2563eb; color: white; padding: 10px 20px; border: none; border-radius: 5px; cursor: pointer; }\n  button:hover { background-color: #1d4ed8; }\n  p::first-line { font-weight: bold; color: #15803d; }\n  a::after { content: ' (link)'; font-size: 0.8em; }\n</style>\n</head>\n<body>\n  <button>Hover Over Me</button>\n  <p>This is a paragraph. The first line of this text will be bold and green. The rest of the paragraph will be normal.</p>\n  <a href=\"#\">Example</a>\n</body>\n</html>"
   },
   {
-    "title": "18. Transitions",
+    "title": "25. Transitions",
     "content": "<p>CSS transitions allow you to change property values smoothly (over a given duration). To create a transition effect, you must specify two things: the CSS property you want to add an effect to, and the duration of the effect.</p><p>In the example, we are transitioning the <code>background-color</code> and <code>transform</code> properties over 0.3 seconds.</p>",
     "initialCode": "<!DOCTYPE html>\n<html>\n<head>\n<style>\n  .box {\n    width: 100px;\n    height: 100px;\n    background-color: red;\n    transition: background-color 0.3s, transform 0.3s;\n  }\n  .box:hover {\n    background-color: blue;\n    transform: rotate(45deg) scale(1.2);\n  }\n</style>\n</head>\n<body>\n  <div class=\"box\"></div>\n</body>\n</html>"
   },
   {
-    "title": "19. Responsive Design & Media Queries",
+    "title": "26. CSS Animations (@keyframes)",
+    "content": "<p>While transitions move from state A to B, <code>@keyframes</code> allow for complex, multi-step animations. You define the steps (0% to 100%) and then apply them with the <code>animation</code> property.</p>",
+    "initialCode": "<!DOCTYPE html>\n<html>\n<head>\n<style>\n  @keyframes bounce {\n    0%, 100% { transform: translateY(0); }\n    50% { transform: translateY(-50px); }\n  }\n  .ball {\n    width: 50px;\n    height: 50px;\n    background: orange;\n    border-radius: 50%;\n    animation: bounce 1s infinite ease-in-out;\n  }\n</style>\n</head>\n<body>\n  <div class=\"ball\"></div>\n</body>\n</html>"
+  },
+  {
+    "title": "27. CSS Variables",
+    "content": "<p>CSS Variables (Custom Properties) allow you to store values and reuse them throughout your stylesheet. They start with <code>--</code> and are accessed using the <code>var()</code> function.</p>",
+    "initialCode": "<!DOCTYPE html>\n<html>\n<head>\n<style>\n  :root {\n    --primary-color: #6366f1;\n    --secondary-color: #a855f7;\n    --padding: 20px;\n  }\n  .card {\n    background: var(--primary-color);\n    color: white;\n    padding: var(--padding);\n    border-radius: 10px;\n    box-shadow: 0 4px 6px var(--secondary-color);\n  }\n</style>\n</head>\n<body>\n  <div class=\"card\">Styled with CSS Variables</div>\n</body>\n</html>"
+  },
+  {
+    "title": "28. Filters & Backdrop-filters",
+    "content": "<p>The <code>filter</code> property applies visual effects like blur or color shifting to an element. <code>backdrop-filter</code> applies the effect to the area *behind* the element (great for glassmorphism).</p>",
+    "initialCode": "<!DOCTYPE html>\n<html>\n<head>\n<style>\n  .bg { background: url('https://picsum.photos/800/600'); width: 100%; height: 300px; display: flex; align-items: center; justify-content: center; }\n  .glass {\n    background: rgba(255, 255, 255, 0.2);\n    backdrop-filter: blur(10px);\n    padding: 30px;\n    border-radius: 15px;\n    border: 1px solid rgba(255, 255, 255, 0.3);\n    color: white;\n    font-weight: bold;\n  }\n</style>\n</head>\n<body>\n  <div class=\"bg\">\n    <div class=\"glass\">Glassmorphism Effect</div>\n  </div>\n</body>\n</html>"
+  },
+  {
+    "title": "29. Responsive Design & Media Queries",
     "content": "<p>Responsive web design makes your web pages look good on all devices (desktops, tablets, and phones). This is done using CSS Media Queries.</p><p>A media query applies a block of CSS only if a certain condition is true (e.g., the browser viewport is a certain width). The example below changes the flex direction from row to column on small screens, making the layout stack vertically.</p>",
     "initialCode": "<!DOCTYPE html>\n<html>\n<head>\n  <style>\n    .container {\n      display: flex;\n      background: lightblue;\n      gap: 10px;\n      padding: 10px;\n    }\n    .box { flex: 1; padding: 20px; background: steelblue; color: white; text-align: center; border-radius: 5px; }\n\n    /* Media Query for screens 768px or less */\n    @media (max-width: 768px) {\n      .container {\n        flex-direction: column;\n      }\n    }\n  </style>\n</head>\n<body>\n  <p>Resize the browser window to see the layout change.</p>\n  <div class=\"container\">\n    <div class=\"box\">Box 1</div>\n    <div class=\"box\">Box 2</div>\n    <div class=\"box\">Box 3</div>\n  </div>\n</body>\n</html>"
+  },
+  {
+    "title": "Part 5: Capstone Project",
+    "isHeader": true
+  },
+  {
+    "title": "30. Final Challenge: Landing Page",
+    "content": "<p>Congratulations on reaching the final challenge! Your task is to convert the design below into a fully functional HTML/CSS landing page. Use everything you've learned: Semantic HTML, Flexbox, Grid, and responsive design.</p><h3>Target Design:</h3><img src='./Code task/website_builder_landing_page.png' alt='Target Landing Page Design' style='width: 100%; border: 1px solid #ccc; margin-bottom: 20px;'><p>To help you, here are the direct links to the assets you should use in your code:</p><ul><li><strong>Logo:</strong> <code>./Code task/img-assets/logo.png</code></li><li><strong>Banner Image:</strong> <code>./Code task/img-assets/banner%20image.png</code></li></ul><p>Good luck!</p>",
+    "initialCode": "<!DOCTYPE html>\n<html>\n<head>\n  <title>My Landing Page</title>\n  <style>\n    /* Start your styling here */\n    body { font-family: sans-serif; margin: 0; padding: 0; }\n  </style>\n</head>\n<body>\n\n  <!-- 1. Use the logo: ./Code task/img-assets/logo.png -->\n  <!-- 2. Use the banner: ./Code task/img-assets/banner image.png -->\n\n</body>\n</html>",
+    "solutionCode": "<!DOCTYPE html>\n<html>\n<head>\n  <style>\n    :root { --primary: #6366f1; --dark: #1e293b; --light: #f8fafc; }\n    body { font-family: sans-serif; margin: 0; color: var(--dark); background: var(--light); line-height: 1.6; }\n    header { display: flex; justify-content: space-between; align-items: center; padding: 20px 5%; background: white; box-shadow: 0 2px 4px rgba(0,0,0,0.05); position: sticky; top: 0; z-index: 10; }\n    .logo img { height: 40px; }\n    nav a { margin-left: 25px; text-decoration: none; color: var(--dark); font-weight: 500; }\n    .hero { display: flex; align-items: center; padding: 60px 5%; gap: 50px; }\n    .hero-content { flex: 1; }\n    .hero-image { flex: 1; }\n    .hero-image img { width: 100%; border-radius: 12px; box-shadow: 0 20px 25px -5px rgba(0,0,0,0.1); }\n    h1 { font-size: 3rem; line-height: 1.1; margin-bottom: 20px; color: var(--primary); }\n    .btn { background: var(--primary); color: white; padding: 12px 28px; border-radius: 6px; text-decoration: none; display: inline-block; font-weight: 600; }\n    .features { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 30px; padding: 80px 5%; }\n    .feature-card { background: white; padding: 30px; border-radius: 10px; border: 1px solid #e2e8f0; }\n    @media (max-width: 768px) { \n      .hero { flex-direction: column; text-align: center; } \n      h1 { font-size: 2.5rem; } \n      nav { display: none; } \n    }\n  </style>\n</head>\n<body>\n  <header>\n    <div class=\"logo\"><img src='./Code task/img-assets/logo.png' alt='Logo'></div>\n    <nav><a href='#'>Features</a><a href='#'>Pricing</a><a href='#' class=\"btn\">Get Started</a></nav>\n  </header>\n  <section class=\"hero\">\n    <div class=\"hero-content\">\n      <h1>Build your dream website in minutes.</h1>\n      <p>The most powerful website builder for creators and entrepreneurs. No coding required.</p>\n      <a href='#' class=\"btn\">Start Building</a>\n    </div>\n    <div class=\"hero-image\"><img src='./Code task/img-assets/banner%20image.png' alt='Banner'></div>\n  </section>\n  <section class=\"features\">\n    <div class=\"feature-card\"><h3>Drag & Drop</h3><p>Intuitive interface to build sections effortlessly.</p></div>\n    <div class=\"feature-card\"><h3>Responsive</h3><p>Your site looks perfect on every device automatically.</p></div>\n    <div class=\"feature-card\"><h3>Fast Hosting</h3><p>Lightning fast loading speeds for your visitors.</p></div>\n  </section>\n</body>\n</html>"
   }
 ]
