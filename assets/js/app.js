@@ -75,7 +75,14 @@ document.addEventListener('DOMContentLoaded', () => {
 
         lessonTitle.textContent = lesson.title;
         lessonBody.innerHTML = lesson.content;
-        editor.value = lesson.initialCode;
+
+        // Autosave load for Capstone Project (Lesson 30)
+        if (lesson.title.includes("30.")) {
+            const savedData = localStorage.getItem('capstone_autosave');
+            editor.value = savedData ? savedData : lesson.initialCode;
+        } else {
+            editor.value = lesson.initialCode;
+        }
 
         // Solution Peek Button Visibility
         if (lesson.solutionCode) {
@@ -172,6 +179,12 @@ document.addEventListener('DOMContentLoaded', () => {
      * Updates the preview iframe with the content from the editor.
      */
     function updatePreview() {
+        // Autosave for Capstone Project (Lesson 30)
+        const lesson = lessons[activeLessonIndex];
+        if (lesson && lesson.title.includes("30.")) {
+            localStorage.setItem('capstone_autosave', editor.value);
+        }
+
         const previewDoc = preview.contentDocument || preview.contentWindow.document;
         previewDoc.open();
         previewDoc.write(`
