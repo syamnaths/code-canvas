@@ -5,43 +5,432 @@
   },
   {
     "title": "1. What is HTML?",
-    "content": "<p>Welcome to web development! HTML (HyperText Markup Language) is the standard language for creating web pages. Think of it as the skeleton that gives every website its structure. It uses 'tags' to define elements like headings, paragraphs, and links.</p><p>Every HTML document starts with a <code>&lt;!DOCTYPE html&gt;</code> declaration, followed by an <code>&lt;html&gt;</code> tag. Inside, the <code>&lt;head&gt;</code> holds metadata (like the page title), and the <code>&lt;body&gt;</code> holds all the visible content.</p>",
-    "initialCode": "<!DOCTYPE html>\n<html>\n<head>\n  <title>My First Page</title>\n</head>\n<body>\n  <h1>Hello, World!</h1>\n  <p>This is my first paragraph.</p>\n</body>\n</html>"
+    "evaluationRules": {
+      "requiredTags": [
+        "html",
+        "head",
+        "body",
+        "h1"
+      ]
+    },
+    "content": "<h3>Welcome to Web Development!</h3><p><strong>HTML (HyperText Markup Language)</strong> is the foundational skeleton of the World Wide Web. Just as a physical skeleton provides structure to the human body, HTML provides the essential structure to every website you visit. It defines the elements, sections, headings, paragraphs, and media of a web page using a system of 'tags'.</p><h4>Task: Starter Template</h4><p>Your goal is to build your first page using this structure:</p><pre class=\"protected-code\">&lt;!DOCTYPE html&gt;\n&lt;html&gt;\n&lt;head&gt;\n  &lt;title&gt;My First Page&lt;/title&gt;\n&lt;/head&gt;\n&lt;body&gt;\n  &lt;h1&gt;Hello, World!&lt;/h1&gt;\n&lt;/body&gt;\n&lt;/html&gt;</pre><h4>Core Concepts & Tags</h4><ul><li><strong>Document Declaration:</strong> Every HTML5 document must begin with <code>&lt;!DOCTYPE html&gt;</code> to inform the browser that standard HTML5 is being used.</li><li><strong>Root Element:</strong> The <code>&lt;html&gt;</code> tag wraps all content on the page.</li><li><strong>Metadata Header:</strong> The <code>&lt;head&gt;</code> tag holds invisible metadata about the page, such as the page title, stylesheet links, and character sets.</li><li><strong>Visible Body:</strong> The <code>&lt;body&gt;</code> tag contains all the text, images, buttons, and layouts that are visible to your visitors.</li></ul><h4>Key Takeaways</h4><p>HTML is not a programming language; it is a markup language. It describes structure, not logic. Learning HTML tags is the critical first step toward mastering frontend web engineering.</p>",
+    "initialCode": "<!DOCTYPE html>\n<html>\n<head>\n  <title>My First Page</title>\n</head>\n<body>\n  <h1>Hello, World!</h1>\n  <p>This is my first paragraph.</p>\n</body>\n</html>",
+    "quiz": [
+      {
+        "question": "What does HTML stand for?",
+        "options": [
+          "HyperText Markup Language",
+          "HighText Markup Language",
+          "HyperTabular Markup Language",
+          "None of the above"
+        ],
+        "answer": 0
+      },
+      {
+        "question": "Which tag represents the root element of an HTML document?",
+        "options": [
+          "<root>",
+          "<body>",
+          "<html>",
+          "<document>"
+        ],
+        "answer": 2
+      },
+      {
+        "question": "Where is metadata, such as the page title, placed?",
+        "options": [
+          "<body>",
+          "<head>",
+          "<meta>",
+          "<header>"
+        ],
+        "answer": 1
+      },
+      {
+        "question": "What is the purpose of '<!DOCTYPE html>'?",
+        "options": [
+          "To display a header on the web page",
+          "To link a CSS stylesheet",
+          "To declare the document type and ensure standards-compliant rendering",
+          "To initialize a JavaScript function"
+        ],
+        "answer": 2
+      }
+    ]
   },
   {
     "title": "2. Text & Headings",
-    "content": "<p>Headings are defined with <code>&lt;h1&gt;</code> to <code>&lt;h6&gt;</code> tags. <code>&lt;h1&gt;</code> is the most important (and usually largest) heading, while <code>&lt;h6&gt;</code> is the least. Search engines use headings to index the structure of your web pages.</p><p>Paragraphs are created with the <code>&lt;p&gt;</code> tag. You can also use tags like <code>&lt;strong&gt;</code> for bold text and <code>&lt;em&gt;</code> for italicized text to add emphasis.</p>",
-    "initialCode": "<!DOCTYPE html>\n<html>\n<body>\n  <h1>Main Title</h1>\n  <h2>Subtitle</h2>\n  <p>This is a standard paragraph. You can make text <strong>bold</strong> or <em>italic</em> for emphasis.</p>\n</body>\n</html>"
+    "evaluationRules": {
+      "requiredTags": [
+        "h1",
+        "h2",
+        "p",
+        "strong",
+        "em"
+      ]
+    },
+    "content": "<h3>Structuring Text in HTML</h3><p>Text is the primary medium of information transfer on the web. HTML provides clear, semantic tags to categorize, style, and structure text content so that search engines can easily index your pages, and screen readers can assist disabled users.</p><h4>Task: Text Structure</h4><p>Use the following template structure for your text and headings:</p><pre class=\"protected-code\">&lt;h1&gt;Main Title&lt;/h1&gt;\n&lt;h2&gt;Subtitle&lt;/h2&gt;\n&lt;p&gt;Standard paragraph &lt;strong&gt;bold&lt;/strong&gt; and &lt;em&gt;italic&lt;/em&gt;&lt;/p&gt;</pre><h4>Headings Hierarchy</h4><p>Headings are defined using tags from <code>&lt;h1&gt;</code> to <code>&lt;h6&gt;</code>. These tags represent a hierarchical structure:</p><ul><li><code>&lt;h1&gt;</code>: The main title of the page (you should typically have only one per page).</li><li><code>&lt;h2&gt;</code>: Major section headings.</li><li><code>&lt;h3&gt;</code> to <code>&lt;h6&gt;</code>: Subheadings for deeper details.</li></ul><h4>Paragraphs & Text Styling</h4><ul><li><strong>Paragraphs (<code>&lt;p&gt;</code>):</strong> Groups sentences into a block with spacing.</li><li><strong>Bold Emphasis (<code>&lt;strong&gt;</code>):</strong> Displays text in bold and signals import to search engines.</li><li><strong>Italic Emphasis (<code>&lt;em&gt;</code>):</strong> Displays text in italics to add conversational stress.</li></ul><h4>Key Takeaways</h4><p>Always use headings in order. Never skip from <code>&lt;h1&gt;</code> to <code>&lt;h4&gt;</code> just because you want a smaller font size\u2014font sizes are styled with CSS, while headings define structure.</p>",
+    "initialCode": "<!DOCTYPE html>\n<html>\n<body>\n  <h1>Main Title</h1>\n  <h2>Subtitle</h2>\n  <p>This is a standard paragraph. You can make text <strong>bold</strong> or <em>italic</em> for emphasis.</p>\n</body>\n</html>",
+    "quiz": [
+      {
+        "question": "Which tag represents the most important heading in HTML?",
+        "options": [
+          "<h6>",
+          "<h0>",
+          "<h1>",
+          "<head>"
+        ],
+        "answer": 2
+      },
+      {
+        "question": "Which tag is used to create a standard paragraph?",
+        "options": [
+          "<paragraph>",
+          "<text>",
+          "<p>",
+          "<pg>"
+        ],
+        "answer": 2
+      },
+      {
+        "question": "Which tag is used to display text with bold visual styling and semantic importance?",
+        "options": [
+          "<bold>",
+          "<strong>",
+          "<bld>",
+          "<emp>"
+        ],
+        "answer": 1
+      },
+      {
+        "question": "Which tag is used to add conversational italicized emphasis to text?",
+        "options": [
+          "<i>",
+          "<italic>",
+          "<em>",
+          "<style>"
+        ],
+        "answer": 2
+      }
+    ]
   },
   {
     "title": "3. Links & Images",
-    "content": "<p>Links (hyperlinks) are created with the <code>&lt;a&gt;</code> (anchor) tag. The <code>href</code> attribute is crucial—it specifies the destination URL.</p><p>Images are embedded using the <code>&lt;img&gt;</code> tag. It's a self-closing tag and requires the <code>src</code> attribute for the image path and the <code>alt</code> attribute for accessibility (it provides a text description if the image can't be loaded).</p>",
-    "initialCode": "<!DOCTYPE html>\n<html>\n<body>\n  <h1>Links & Images</h1>\n  <p>This is a link to a helpful resource:</p>\n  <a href=\"https://developer.mozilla.org/\">MDN Web Docs</a>\n  <h2>Here is an image:</h2>\n  <img src=\"https://picsum.photos/400/200\" alt=\"A random placeholder image\">\n</body>\n</html>"
+    "evaluationRules": {
+      "requiredTags": [
+        "a",
+        "img"
+      ]
+    },
+    "content": "<h3>Navigating and Visualizing the Web</h3><p>Web pages are not isolated islands; they are interconnected via links and enriched by visual media. In this topic, we master the anchor and image tags\u2014two of the most heavily used tags in web development.</p><h4>Task: Links & Media</h4><p>Use this structure to add navigation and images:</p><pre class=\"protected-code\">&lt;a href=\"url\"&gt;Link Text&lt;/a&gt;\n&lt;img src=\"path\" alt=\"description\"&gt;</pre><h4>Anchor Tags (Hyperlinks)</h4><p>Links are created using the <code>&lt;a&gt;</code> tag. It requires the <code>href</code> (hypertext reference) attribute, which specifies the destination URL. Example:</p><pre><code>&lt;a href=\"https://google.com\"&gt;Search Google&lt;/a&gt;</code></pre><h4>Embedding Images</h4><p>Images are embedded using the <code>&lt;img&gt;</code> tag. It is a <strong>self-closing</strong> tag (no separate closing tag is used) and relies on two essential attributes:</p><ul><li><code>src</code>: The absolute or relative file path to the image asset.</li><li><code>alt</code>: Alternative text description, crucial for screen readers and displayed if the image fails to load.</li></ul><h4>Key Takeaways</h4><p>Never skip the <code>alt</code> attribute on images. Leaving it out makes your website inaccessible to visually impaired users and harms your SEO rankings.</p>",
+    "initialCode": "<!DOCTYPE html>\n<html>\n<body>\n  <h1>Links & Images</h1>\n  <p>This is a link to a helpful resource:</p>\n  <a href=\"https://developer.mozilla.org/\">MDN Web Docs</a>\n  <h2>Here is an image:</h2>\n  <img src=\"https://picsum.photos/400/200\" alt=\"A random placeholder image\">\n</body>\n</html>",
+    "quiz": [
+      {
+        "question": "Which tag is used to create a hyperlink in HTML?",
+        "options": [
+          "<link>",
+          "<a>",
+          "<href>",
+          "<url>"
+        ],
+        "answer": 1
+      },
+      {
+        "question": "What attribute specifies the destination URL of an anchor link?",
+        "options": [
+          "src",
+          "link",
+          "href",
+          "target"
+        ],
+        "answer": 2
+      },
+      {
+        "question": "Which attribute specifies the file path of an image asset?",
+        "options": [
+          "href",
+          "src",
+          "path",
+          "source"
+        ],
+        "answer": 1
+      },
+      {
+        "question": "What is the primary purpose of the 'alt' attribute on an image tag?",
+        "options": [
+          "To change the color of the image",
+          "To specify a high-resolution link",
+          "To provide alternative text for accessibility and search engine indexing",
+          "To animate the image entry"
+        ],
+        "answer": 2
+      }
+    ]
   },
   {
     "title": "4. Lists (Unordered & Ordered)",
-    "content": "<p>HTML offers two main list types. An unordered list (<code>&lt;ul&gt;</code>) is for items where the order doesn't matter, typically shown with bullets. An ordered list (<code>&lt;ol&gt;</code>) is for items where sequence is important, shown with numbers.</p><p>In both cases, each list item is defined with an <code>&lt;li&gt;</code> tag.</p>",
-    "initialCode": "<!DOCTYPE html>\n<html>\n<body>\n  <h2>Unordered List: Shopping List</h2>\n  <ul>\n    <li>Coffee</li>\n    <li>Tea</li>\n    <li>Milk</li>\n  </ul>\n  <h2>Ordered List: Top 3 Planets</h2>\n  <ol>\n    <li>Earth</li>\n    <li>Mars</li>\n    <li>Jupiter</li>\n  </ol>\n</body>\n</html>"
+    "content": "<h3>Grouping Items semanticly</h3><p>Lists are standard structures in design and content. HTML offers two primary semantic lists to organize related items cleanly:</p><h4>1. Unordered Lists (<code>&lt;ul&gt;</code>)</h4><p>Used when the order of items does not matter (e.g., a shopping list or navigation links). Items are typically displayed with bullet points.</p><h4>2. Ordered Lists (<code>&lt;ol&gt;</code>)</h4><p>Used when the sequence of items is important (e.g., cooking recipes, tutorials). Items are displayed with sequential numbers.</p><h4>List Items (<code>&lt;li&gt;</code>)</h4><p>For both list types, each discrete item must be wrapped in a <code>&lt;li&gt;</code> (list item) tag. You cannot put text directly inside a <code>&lt;ul&gt;</code> or <code>&lt;ol&gt;</code> without wrapping it in <code>&lt;li&gt;</code>.</p><h4>Key Takeaways</h4><p>Lists can be nested! You can place a new <code>&lt;ul&gt;</code> inside a <code>&lt;li&gt;</code> to create multi-level navigation dropdowns or structured outlines.</p>",
+    "initialCode": "<!DOCTYPE html>\n<html>\n<body>\n  <h2>Unordered List: Shopping List</h2>\n  <ul>\n    <li>Coffee</li>\n    <li>Tea</li>\n    <li>Milk</li>\n  </ul>\n  <h2>Ordered List: Top 3 Planets</h2>\n  <ol>\n    <li>Earth</li>\n    <li>Mars</li>\n    <li>Jupiter</li>\n  </ol>\n</body>\n</html>",
+    "quiz": [
+      {
+        "question": "Which tag is used to create a bulleted, unordered list?",
+        "options": [
+          "<ol>",
+          "<ul>",
+          "<list>",
+          "<bullet>"
+        ],
+        "answer": 1
+      },
+      {
+        "question": "Which tag is used to create a numbered, ordered list?",
+        "options": [
+          "<ol>",
+          "<ul>",
+          "<nl>",
+          "<sequence>"
+        ],
+        "answer": 0
+      },
+      {
+        "question": "What tag must wrap every individual item inside a list?",
+        "options": [
+          "<item>",
+          "<li>",
+          "<dl>",
+          "<list-item>"
+        ],
+        "answer": 1
+      },
+      {
+        "question": "Can list items (<li>) contain other HTML elements like links?",
+        "options": [
+          "No, they can only contain plain text",
+          "Yes, they can contain links, paragraphs, and even other nested lists",
+          "Only if the list is ordered",
+          "Only in HTML5 standard modes"
+        ],
+        "answer": 1
+      }
+    ],
+    "evaluationRules": {
+      "requiredTags": [
+        "body"
+      ]
+    }
   },
   {
     "title": "5. Tables",
-    "content": "<p>Tables are used to display data in rows and columns. A table starts with a <code>&lt;table&gt;</code> tag. Each row is defined with <code>&lt;tr&gt;</code>, table headers with <code>&lt;th&gt;</code>, and data cells with <code>&lt;td&gt;</code>.</p><p>Adding a simple border with CSS (as shown) makes tables much easier to read.</p>",
-    "initialCode": "<!DOCTYPE html>\n<html>\n<head>\n<style> table, th, td { border: 1px solid black; border-collapse: collapse; padding: 5px; } </style>\n</head>\n<body>\n  <h2>Employee Data</h2>\n  <table>\n    <tr>\n      <th>First Name</th>\n      <th>Last Name</th>\n    </tr>\n    <tr>\n      <td>John</td>\n      <td>Doe</td>\n    </tr>\n    <tr>\n      <td>Jane</td>\n      <td>Smith</td>\n    </tr>\n  </table>\n</body>\n</html>"
+    "content": "<h3>Presenting Tabular Data</h3><p>Tables allow you to present structured, relational data in two dimensions (rows and columns). While CSS layouts like Grid are preferred for page design, HTML tables remain the semantic standard for data sheets.</p><h4>Core Table Tags</h4><ul><li><code>&lt;table&gt;</code>: The container tag that initializes the table context.</li><li><code>&lt;tr&gt;</code> (Table Row): Declares a horizontal row of cells.</li><li><code>&lt;th&gt;</code> (Table Header): Defines a heading cell, bolded and centered by default.</li><li><code>&lt;td&gt;</code> (Table Data): Defines a standard data cell.</li></ul><h4>Key Takeaways</h4><p>To keep table cells aligned, every row (<code>&lt;tr&gt;</code>) should contain the exact same number of cell tags (either <code>&lt;th&gt;</code> or <code>&lt;td&gt;</code>) unless you use structural attributes like <code>colspan</code> or <code>rowspan</code> to merge cells.</p>",
+    "initialCode": "<!DOCTYPE html>\n<html>\n<head>\n<style> table, th, td { border: 1px solid black; border-collapse: collapse; padding: 5px; } </style>\n</head>\n<body>\n  <h2>Employee Data</h2>\n  <table>\n    <tr>\n      <th>First Name</th>\n      <th>Last Name</th>\n    </tr>\n    <tr>\n      <td>John</td>\n      <td>Doe</td>\n    </tr>\n    <tr>\n      <td>Jane</td>\n      <td>Smith</td>\n    </tr>\n  </table>\n</body>\n</html>",
+    "quiz": [
+      {
+        "question": "Which tag defines a horizontal row within an HTML table?",
+        "options": [
+          "<td>",
+          "<th>",
+          "<tr>",
+          "<row>"
+        ],
+        "answer": 2
+      },
+      {
+        "question": "Which tag is used to define a standard data cell in a table?",
+        "options": [
+          "<td>",
+          "<th>",
+          "<cell>",
+          "<data>"
+        ],
+        "answer": 0
+      },
+      {
+        "question": "What tag defines a table header cell, styled as bold by default?",
+        "options": [
+          "<header>",
+          "<head>",
+          "<th>",
+          "<thead>"
+        ],
+        "answer": 2
+      },
+      {
+        "question": "What CSS property collapses adjacent borders into a single border line in table design?",
+        "options": [
+          "border-spacing",
+          "border-collapse",
+          "border-style",
+          "border-unify"
+        ],
+        "answer": 1
+      }
+    ],
+    "evaluationRules": {
+      "requiredTags": [
+        "table",
+        "tr",
+        "td"
+      ]
+    }
   },
-    {
+  {
     "title": "6. Forms & Inputs",
-    "content": "<p>Forms are used to collect user input. The <code>&lt;form&gt;</code> element is a container for different types of input elements, such as text fields, checkboxes, radio buttons, and submit buttons.</p><p>The <code>&lt;label&gt;</code> tag defines a label for many form elements, which improves accessibility. The <code>for</code> attribute of the label should be equal to the <code>id</code> of the input element.</p>",
-    "initialCode": "<!DOCTYPE html>\n<html>\n<body>\n<h2>Contact Us</h2>\n<form>\n  <label for=\"fname\">First name:</label><br>\n  <input type=\"text\" id=\"fname\" name=\"fname\"><br><br>\n  <label for=\"email\">Email:</label><br>\n  <input type=\"email\" id=\"email\" name=\"email\"><br><br>\n  <input type=\"submit\" value=\"Submit\">\n</form>\n</body>\n</html>"
+    "content": "<h3>Interactive User Input</h3><p>Forms represent the primary mechanism for interactive web actions, allowing users to enter data, submit searches, upload files, and send feedback.</p><h4>The Form Container</h4><p>All inputs must reside inside a <code>&lt;form&gt;</code> tag, which determines where to send data using the <code>action</code> attribute and how to send it using the <code>method</code> attribute.</p><h4>Core Components</h4><ul><li><strong>Labels (<code>&lt;label&gt;</code>):</strong> Essential for accessibility. Clicking a label activates its corresponding input. It is linked by setting the label's <code>for</code> attribute equal to the input's <code>id</code>.</li><li><strong>Inputs (<code>&lt;input&gt;</code>):</strong> Self-closing tags that change character based on the <code>type</code> attribute (e.g., <code>text</code>, <code>email</code>, <code>password</code>, <code>submit</code>).</li></ul><h4>Key Takeaways</h4><p>Always assign a <code>name</code> attribute to inputs. When the form is submitted, the value inside the input is passed to the server paired with this name name (e.g., <code>email=user@domain.com</code>).</p>",
+    "initialCode": "<!DOCTYPE html>\n<html>\n<body>\n<h2>Contact Us</h2>\n<form>\n  <label for=\"fname\">First name:</label><br>\n  <input type=\"text\" id=\"fname\" name=\"fname\"><br><br>\n  <label for=\"email\">Email:</label><br>\n  <input type=\"email\" id=\"email\" name=\"email\"><br><br>\n  <input type=\"submit\" value=\"Submit\">\n</form>\n</body>\n</html>",
+    "quiz": [
+      {
+        "question": "Which container tag encapsulates input fields and handles data submission?",
+        "options": [
+          "<inputs>",
+          "<form>",
+          "<section>",
+          "<interactive>"
+        ],
+        "answer": 1
+      },
+      {
+        "question": "How do you associate an HTML label tag with an input tag?",
+        "options": [
+          "By placing the label inside the input tag",
+          "By matching the label's 'for' attribute with the input's 'id'",
+          "By giving them the same class name",
+          "They associate automatically based on layout order"
+        ],
+        "answer": 1
+      },
+      {
+        "question": "Which input type is specifically used to submit form data?",
+        "options": [
+          "type=\"button\"",
+          "type=\"click\"",
+          "type=\"submit\"",
+          "type=\"post\""
+        ],
+        "answer": 2
+      },
+      {
+        "question": "Why is the 'name' attribute essential on input fields?",
+        "options": [
+          "It is used by CSS for styling",
+          "It represents the variable name paired with the user's data on submission",
+          "It displays placeholder text inside the box",
+          "It satisfies strict HTML5 parser rules"
+        ],
+        "answer": 1
+      }
+    ],
+    "evaluationRules": {
+      "requiredTags": [
+        "body"
+      ]
+    }
   },
   {
     "title": "7. Semantic HTML",
-    "content": "<p>Semantic HTML elements clearly describe their meaning to both the browser and the developer. This improves accessibility and SEO.</p><p>Examples include <code>&lt;header&gt;</code>, <code>&lt;nav&gt;</code>, <code>&lt;main&gt;</code>, <code>&lt;article&gt;</code>, <code>&lt;section&gt;</code>, and <code>&lt;footer&gt;</code>. They function like <code>&lt;div&gt;</code> elements but provide more context about your content.</p>",
-    "initialCode": "<!DOCTYPE html>\n<html>\n<head>\n<style> header, nav, main, footer { display: block; padding: 10px; margin: 5px; border: 1px solid gray; } </style>\n</head>\n<body>\n<header><h1>My Website</h1></header>\n<nav><a href=\"#\">Home</a> | <a href=\"#\">About</a></nav>\n<main>\n  <section><h2>Main Content</h2><p>This is where the primary content goes.</p></section>\n</main>\n<footer><p>Copyright 2025</p></footer>\n</body>\n</html>"
+    "content": "<h3>Designing with Meaning</h3><p>In early web design, pages were built using generic <code>&lt;div&gt;</code> elements nested inside other divs. In HTML5, search engines and screen readers introduced **Semantic Elements** to give structural elements direct meaning.</p><h4>Core Semantic Containers</h4><ul><li><code>&lt;header&gt;</code>: Header banners, logos, and navigation controls.</li><li><code>&lt;nav&gt;</code>: Grouping of navigation links.</li><li><code>&lt;main&gt;</code>: The primary content of the document.</li><li><code>&lt;article&gt;</code>: Self-contained composition (e.g., blog posts, forum replies).</li><li><code>&lt;section&gt;</code>: A thematic grouping of content.</li><li><code>&lt;footer&gt;</code>: The base footer containing copyright, contact links, and secondary links.</li></ul><h4>Key Takeaways</h4><p>Using semantic HTML elements dramatically improves **SEO (Search Engine Optimization)** because search engines can identify the header, navigation, and main body automatically, indexing your keywords with much higher accuracy.</p>",
+    "initialCode": "<!DOCTYPE html>\n<html>\n<head>\n<style> header, nav, main, footer { display: block; padding: 10px; margin: 5px; border: 1px solid gray; } </style>\n</head>\n<body>\n<header><h1>My Website</h1></header>\n<nav><a href=\"#\">Home</a> | <a href=\"#\">About</a></nav>\n<main>\n  <section><h2>Main Content</h2><p>This is where the primary content goes.</p></section>\n</main>\n<footer><p>Copyright 2025</p></footer>\n</body>\n</html>",
+    "quiz": [
+      {
+        "question": "What is the primary benefit of Semantic HTML?",
+        "options": [
+          "It speeds up loading times",
+          "It provides structural meaning to elements, helping SEO and screen readers",
+          "It forces text to render in specific sizes",
+          "It eliminates the need for CSS stylesheets"
+        ],
+        "answer": 1
+      },
+      {
+        "question": "Which semantic element should house the main navigational links of a page?",
+        "options": [
+          "<menu>",
+          "<nav>",
+          "<links>",
+          "<header>"
+        ],
+        "answer": 1
+      },
+      {
+        "question": "Why is semantic HTML preferred over plain <div> elements?",
+        "options": [
+          "It makes pages display faster in mobile viewports",
+          "It provides context about content purpose instead of acting as a generic box",
+          "It enables styling variables directly",
+          "It converts text to uppercase automatically"
+        ],
+        "answer": 1
+      },
+      {
+        "question": "Which element is most appropriate for copyright text at the base of a page?",
+        "options": [
+          "<bottom>",
+          "<footer>",
+          "<base>",
+          "<section>"
+        ],
+        "answer": 1
+      }
+    ],
+    "evaluationRules": {
+      "requiredTags": [
+        "header",
+        "main",
+        "footer"
+      ]
+    }
   },
   {
     "title": "8. Accessibility & ARIA",
-    "content": "<p>Accessibility (A11y) ensures that websites can be used by everyone, including people with disabilities. ARIA (Accessible Rich Internet Applications) attributes help provide extra context to screen readers when standard HTML isn't enough.</p><p>Key practices include using <code>alt</code> text for images, high contrast colors, and <code>aria-label</code> for elements that don't have visible text.</p>",
-    "initialCode": "<!DOCTYPE html>\n<html>\n<body>\n  <h1>Accessible Web Design</h1>\n  <nav aria-label=\"Main Navigation\">\n    <ul>\n      <li><a href=\"#\">Home</a></li>\n      <li><button aria-label=\"Close modal\">X</button></li>\n    </ul>\n  </nav>\n  <img src=\"https://picsum.photos/200\" alt=\"A beautiful sunset over the mountains\">\n</body>\n</html>"
+    "content": "<h3>Building an Inclusive Web</h3><p><strong>Web Accessibility (A11y)</strong> is the practice of designing websites that can be navigated, read, and understood by everyone\u2014including those with visual, auditory, motor, or cognitive impairments.</p><h4>ARIA (Accessible Rich Internet Applications)</h4><p>When native HTML tags are not enough to describe complex user controls, we use **ARIA attributes** to add descriptive labels for assistive devices:</p><ul><li><code>aria-label</code>: Defines a string value that labels an interactive element that lacks visible text.</li><li><code>aria-hidden</code>: Hides decorative elements from screen readers to keep navigation clear.</li></ul><h4>Key Takeaways</h4><p>Enforcing standard accessibility is not just good practice\u2014in many regions, failing to meet WCAG (Web Content Accessibility Guidelines) standards is a legal violation. Keep touch targets large ($\\ge 44px$) and contrast high.</p>",
+    "initialCode": "<!DOCTYPE html>\n<html>\n<body>\n  <h1>Accessible Web Design</h1>\n  <nav aria-label=\"Main Navigation\">\n    <ul>\n      <li><a href=\"#\">Home</a></li>\n      <li><button aria-label=\"Close modal\">X</button></li>\n    </ul>\n  </nav>\n  <img src=\"https://picsum.photos/200\" alt=\"A beautiful sunset over the mountains\">\n</body>\n</html>",
+    "quiz": [
+      {
+        "question": "What does ARIA stand for in web accessibility?",
+        "options": [
+          "Accessible Rich Internet Applications",
+          "Automatic Responsive Interaction Architecture",
+          "Access Rendering Interface System",
+          "Active Reader Information Assistance"
+        ],
+        "answer": 0
+      },
+      {
+        "question": "What attribute supplies label text to elements that have no visible text on screen?",
+        "options": [
+          "alt",
+          "aria-label",
+          "description",
+          "title"
+        ],
+        "answer": 1
+      },
+      {
+        "question": "Which action represents a vital accessibility check when embedding media?",
+        "options": [
+          "Limiting all images to small dimensions",
+          "Ensuring every image tag has a descriptive 'alt' text",
+          "Only using grayscale images",
+          "Styling images with circular border radius values"
+        ],
+        "answer": 1
+      },
+      {
+        "question": "What is the minimum recommended WCAG AA contrast ratio for standard normal body text?",
+        "options": [
+          "2:1",
+          "3:1",
+          "4.5:1",
+          "7:1"
+        ],
+        "answer": 2
+      }
+    ],
+    "evaluationRules": {
+      "requiredTags": [
+        "nav",
+        "img"
+      ]
+    }
   },
   {
     "title": "Part 2: CSS Fundamentals",
@@ -49,33 +438,316 @@
   },
   {
     "title": "9. What is CSS?",
-    "content": "<p>CSS (Cascading Style Sheets) is the language we use to style an HTML document. It describes how HTML elements should be displayed on screen. You can add CSS directly into HTML using the <code>&lt;style&gt;</code> tag, typically placed in the <code>&lt;head&gt;</code>.</p><p>A CSS rule has a selector (e.g., <code>h1</code>) and a declaration block (e.g., <code>{ color: blue; }</code>).</p>",
-    "initialCode": "<!DOCTYPE html>\n<html>\n<head>\n  <style>\n    body {\n      font-family: sans-serif;\n      background-color: #f0f0f0;\n    }\n    h1 {\n      color: steelblue;\n      text-align: center;\n    }\n    p {\n      color: #555;\n    }\n  </style>\n</head>\n<body>\n  <h1>My First Styled Page</h1>\n  <p>This page has some basic styling!</p>\n</body>\n</html>"
+    "content": "<h3>Introducing Stylesheets</h3><p><strong>CSS (Cascading Style Sheets)</strong> is the engine of design and aesthetics on the web. While HTML structures the content of a document, CSS takes control of the presentation, layout, visual themes, colors, typography, and response states.</p><h4>CSS Syntax Anatomy</h4><p>A CSS rule is split into two major parts:</p><pre><code>h1 {\n  color: steelblue;\n  font-size: 24px;\n}</code></pre><ul><li><strong>Selector (<code>h1</code>):</strong> Points to the HTML element(s) you want to target.</li><li><strong>Declaration Block (inside <code>{}</code>):</strong> Contains styling rules separated by semicolons. Each declaration is a <code>property: value;</code> pair.</li></ul><h4>Key Takeaways</h4><p>The term 'Cascading' means styles follow a hierarchy. Rules defined at the top can cascade down to nested children, and specific rules override general rules.</p>",
+    "initialCode": "<!DOCTYPE html>\n<html>\n<head>\n  <style>\n    body {\n      font-family: sans-serif;\n      background-color: #f0f0f0;\n    }\n    h1 {\n      color: steelblue;\n      text-align: center;\n    }\n    p {\n      color: #555;\n    }\n  </style>\n</head>\n<body>\n  <h1>My First Styled Page</h1>\n  <p>This page has some basic styling!</p>\n</body>\n</html>",
+    "quiz": [
+      {
+        "question": "What does CSS stand for?",
+        "options": [
+          "Computer Style Sheets",
+          "Creative Styling Systems",
+          "Cascading Style Sheets",
+          "Complex Structure Syntax"
+        ],
+        "answer": 2
+      },
+      {
+        "question": "Where is a custom <style> block typically nested in HTML documents?",
+        "options": [
+          "Inside the <body>",
+          "Inside the <head>",
+          "Directly before <html>",
+          "Inside <footer>"
+        ],
+        "answer": 1
+      },
+      {
+        "question": "In the rule 'h1 { color: blue; }', what is 'h1'?",
+        "options": [
+          "Declaration",
+          "Property",
+          "Selector",
+          "Rule-value"
+        ],
+        "answer": 2
+      },
+      {
+        "question": "Which CSS property governs the background fill of a container?",
+        "options": [
+          "color",
+          "background-color",
+          "fill",
+          "bg-style"
+        ],
+        "answer": 1
+      }
+    ],
+    "evaluationRules": {
+      "requiredTags": [
+        "h1",
+        "style"
+      ]
+    }
   },
   {
     "title": "10. Selectors (Class & ID)",
-    "content": "<p>To style specific elements, we use class and ID selectors.</p><ul><li><strong>Class Selector:</strong> Use a period (<code>.</code>) followed by the class name (e.g., <code>.highlight</code>). Classes are reusable and can be applied to many elements.</li><li><strong>ID Selector:</strong> Use a hash (<code>#</code>) followed by the id name (e.g., <code>#header</code>). IDs must be unique to a single element on the page.</li></ul>",
-    "initialCode": "<!DOCTYPE html>\n<html>\n<head>\n  <style>\n    .highlight-text {\n      background-color: yellow;\n      font-weight: bold;\n    }\n    #main-title {\n      border-bottom: 3px solid steelblue;\n      padding-bottom: 10px;\n    }\n  </style>\n</head>\n<body>\n  <h1 id=\"main-title\">A Unique Title</h1>\n  <p>This is a paragraph with <span class=\"highlight-text\">highlighted text</span>.</p>\n  <p class=\"highlight-text\">This entire paragraph is highlighted.</p>\n</body>\n</html>"
+    "content": "<h3>Targeting Elements Precisely</h3><p>In real-world web pages, targeting every tag of a certain type (like every <code>&lt;p&gt;</code>) is too broad. We need ways to pinpoint specific elements. CSS offers class and ID selectors for this purpose.</p><h4>Class Selector (<code>.className</code>)</h4><p>A class targets elements that share a common design. In HTML, assign it using `class=\"my-class\"`. In CSS, target it with a **leading dot (<code>.</code>)**. Classes are **reusable** and can be applied to any number of elements.</p><h4>ID Selector (<code>#idName</code>)</h4><p>An ID targets a single, highly specific element. In HTML, assign it using `id=\"my-id\"`. In CSS, target it with a **leading hash (<code>#</code>)**. IDs **must be unique**\u2014only one element per page can share the same ID.</p><h4>Key Takeaways</h4><p>Classes are for general styles (e.g., highlighting a warning card). IDs are for layout landmarks (e.g., targeting the navigation container).</p>",
+    "initialCode": "<!DOCTYPE html>\n<html>\n<head>\n  <style>\n    .highlight-text {\n      background-color: yellow;\n      font-weight: bold;\n    }\n    #main-title {\n      border-bottom: 3px solid steelblue;\n      padding-bottom: 10px;\n    }\n  </style>\n</head>\n<body>\n  <h1 id=\"main-title\">A Unique Title</h1>\n  <p>This is a paragraph with <span class=\"highlight-text\">highlighted text</span>.</p>\n  <p class=\"highlight-text\">This entire paragraph is highlighted.</p>\n</body>\n</html>",
+    "quiz": [
+      {
+        "question": "Which prefix is used in CSS to target a class selector?",
+        "options": [
+          "# (hash)",
+          ". (dot)",
+          "$ (dollar)",
+          "@ (at)"
+        ],
+        "answer": 1
+      },
+      {
+        "question": "Which prefix is used in CSS to target a unique ID selector?",
+        "options": [
+          "# (hash)",
+          ". (dot)",
+          ": (colon)",
+          "! (exclamation)"
+        ],
+        "answer": 0
+      },
+      {
+        "question": "What is a major conceptual difference between classes and IDs?",
+        "options": [
+          "Classes only work on structural elements; IDs work on everything",
+          "IDs must be unique to a single element per page; classes are reusable",
+          "Classes are written in uppercase; IDs in lowercase",
+          "There is no difference"
+        ],
+        "answer": 1
+      },
+      {
+        "question": "Can an HTML tag have multiple classes assigned to it?",
+        "options": [
+          "No, only one class is allowed per tag",
+          "Yes, they should be listed inside the class attribute separated by spaces",
+          "Yes, but you must write separate class attributes for each one",
+          "Only in CSS Grid environments"
+        ],
+        "answer": 1
+      }
+    ],
+    "evaluationRules": {
+      "requiredTags": [
+        "body"
+      ]
+    }
   },
   {
     "title": "11. The Box Model",
-    "content": "<p>Every HTML element is a rectangular box. The CSS box model describes this concept. It consists of: margins, borders, padding, and the actual content.</p><ul><li><strong>Content:</strong> The text, image, etc.</li><li><strong>Padding:</strong> Transparent space between the content and the border.</li><li><strong>Border:</strong> A line that goes around the padding and content.</li><li><strong>Margin:</strong> Transparent space outside the border, separating it from other elements.</li></ul>",
-    "initialCode": "<!DOCTYPE html>\n<html>\n<head>\n  <style>\n    .box {\n      width: 300px;\n      background-color: #e0f7fa;\n      border: 10px solid #00796b;\n      padding: 40px;\n      margin: 25px auto; /* 'auto' horizontally centers block elements */\n      text-align: center;\n    }\n  </style>\n</head>\n<body>\n  <h2>The Box Model in Action</h2>\n  <div class=\"box\">This element has margin, border, and padding.</div>\n</body>\n</html>"
+    "content": "<h3>Understanding Layout Boxes</h3><p>Every HTML element is rendered as a rectangular block. How these blocks size and interact is determined by the **CSS Box Model**.</p><h4>The Four Layers</h4><p>From the inside out, the Box Model layers are:</p><ul><li><strong>1. Content:</strong> The text, image, or video inside.</li><li><strong>2. Padding:</strong> Transparent spacing inside the border. It cushions the content.</li><li><strong>3. Border:</strong> A physical boundary layer wrapping the padding.</li><li><strong>4. Margin:</strong> Transparent spacing outside the border. It separates this element from adjacent neighbors.</li></ul><h4>Sizing Calculations</h4><p>By default, when you set `width: 300px`, the browser applies it *only* to the content. Adding 20px padding and 5px border makes the actual visible width $300 + 40 + 10 = 350px$.</p><h4>Key Takeaways</h4><p>You can change how sizing works using `box-sizing: border-box`. This makes the width specify the entire box, including padding and borders, making calculations much simpler.</p>",
+    "initialCode": "<!DOCTYPE html>\n<html>\n<head>\n  <style>\n    .box {\n      width: 300px;\n      background-color: #e0f7fa;\n      border: 10px solid #00796b;\n      padding: 40px;\n      margin: 25px auto; /* 'auto' horizontally centers block elements */\n      text-align: center;\n    }\n  </style>\n</head>\n<body>\n  <h2>The Box Model in Action</h2>\n  <div class=\"box\">This element has margin, border, and padding.</div>\n</body>\n</html>",
+    "quiz": [
+      {
+        "question": "What are the four components of the CSS Box Model, from the inside out?",
+        "options": [
+          "Content, Border, Margin, Padding",
+          "Content, Padding, Border, Margin",
+          "Margin, Border, Padding, Content",
+          "Padding, Content, Border, Margin"
+        ],
+        "answer": 1
+      },
+      {
+        "question": "Which property adds spacing inside the border, surrounding the content?",
+        "options": [
+          "margin",
+          "border-spacing",
+          "padding",
+          "content-indent"
+        ],
+        "answer": 2
+      },
+      {
+        "question": "Which property adds spacing outside the border, separating adjacent elements?",
+        "options": [
+          "padding",
+          "margin",
+          "border-offset",
+          "gap"
+        ],
+        "answer": 1
+      },
+      {
+        "question": "How is total visible block width calculated under default content-box rules?",
+        "options": [
+          "Width only",
+          "Width + Margin",
+          "Width + Left/Right Padding + Left/Right Border",
+          "Width + Padding + Border + Margin"
+        ],
+        "answer": 2
+      }
+    ],
+    "evaluationRules": {
+      "requiredTags": [
+        "body"
+      ]
+    }
   },
   {
     "title": "12. Colors & Backgrounds",
-    "content": "<p>CSS gives you full control over colors. Use <code>color</code> for text and <code>background-color</code> for the background of an element.</p><p>Colors can be specified by name (<code>red</code>), HEX codes (<code>#ff0000</code>), or RGB values (<code>rgb(255, 0, 0)</code>). HEX is most common for web design.</p><p>You can also set a <code>background-image</code> using a URL.</p>",
-    "initialCode": "<!DOCTYPE html>\n<html>\n<head>\n  <style>\n    body {\n      background-color: #111827; /* Dark Gray */\n      background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url(https://picsum.photos/1200/800);\n      background-size: cover;\n      color: #f3f4f6; /* Light Gray */\n      text-align: center;\n    }\n    h1 {\n      color: #60a5fa; /* A nice blue */\n    }\n    .panel {\n      background-color: rgba(31, 41, 55, 0.8);\n      border: 1px solid #374151;\n      padding: 20px;\n      margin: 20px auto;\n      width: 80%;\n      border-radius: 8px;\n    }\n  </style>\n</head>\n<body>\n  <h1>Dark Theme Design</h1>\n  <div class=\"panel\">\n    <p>This is a panel with a semi-transparent background color.</p>\n  </div>\n</body>\n</html>"
+    "content": "<h3>Defining Visual Themes</h3><p>Color is one of the most powerful design aspects, evoking emotion and giving your page its primary theme. CSS provides massive control over color and backgrounds.</p><h4>Color Specifications</h4><ul><li><strong>HEX (Hexadecimal):</strong> Base-16 codes starting with `#` (e.g., `#6366f1` for Indigo). Highly concise and standard.</li><li><strong>RGB / RGBA:</strong> Declares red, green, and blue values (0-255). The `A` stands for **Alpha** (0.0 to 1.0) which sets transparency.</li></ul><h4>Backgrounds and Gradients</h4><p>Instead of flat colors, you can apply a linear or radial gradient using the <code>background-image</code> property:</p><pre><code>background-image: linear-gradient(to right, red, yellow);</code></pre><h4>Key Takeaways</h4><p>Ensure your color pairings satisfy accessibility guidelines. Light gray text on a white background is very difficult to read; always check contrast ratios using developer tools.</p>",
+    "initialCode": "<!DOCTYPE html>\n<html>\n<head>\n  <style>\n    body {\n      background-color: #111827; /* Dark Gray */\n      background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url(https://picsum.photos/1200/800);\n      background-size: cover;\n      color: #f3f4f6; /* Light Gray */\n      text-align: center;\n    }\n    h1 {\n      color: #60a5fa; /* A nice blue */\n    }\n    .panel {\n      background-color: rgba(31, 41, 55, 0.8);\n      border: 1px solid #374151;\n      padding: 20px;\n      margin: 20px auto;\n      width: 80%;\n      border-radius: 8px;\n    }\n  </style>\n</head>\n<body>\n  <h1>Dark Theme Design</h1>\n  <div class=\"panel\">\n    <p>This is a panel with a semi-transparent background color.</p>\n  </div>\n</body>\n</html>",
+    "quiz": [
+      {
+        "question": "Which color format matches base-16 strings starting with '#'? ",
+        "options": [
+          "RGB",
+          "HSL",
+          "HEX",
+          "CMYK"
+        ],
+        "answer": 2
+      },
+      {
+        "question": "What is the primary role of the 'Alpha' channel in RGBA color formats?",
+        "options": [
+          "Adjusting brightness",
+          "Determining opacity/transparency",
+          "Controlling font weights",
+          "Adding structural shadows"
+        ],
+        "answer": 1
+      },
+      {
+        "question": "What property creates gradient background fills?",
+        "options": [
+          "background-color",
+          "background-image",
+          "fill-style",
+          "gradient-blend"
+        ],
+        "answer": 1
+      },
+      {
+        "question": "Which RGBA color declaration represents a semi-transparent pure blue?",
+        "options": [
+          "rgba(0, 0, 255, 0.5)",
+          "rgba(255, 0, 0, 0.8)",
+          "rgba(0, 255, 0, 0.5)",
+          "rgba(0, 0, 255, 1.0)"
+        ],
+        "answer": 0
+      }
+    ],
+    "evaluationRules": {
+      "requiredTags": [
+        "body"
+      ]
+    }
   },
-    {
+  {
     "title": "13. Typography",
-    "content": "<p>CSS gives you control over the appearance of text. Key properties include:</p><ul><li><code>font-family</code>: Specifies the font for an element (e.g., 'Arial', sans-serif).</li><li><code>font-size</code>: Sets the size of the text.</li><li><code>font-weight</code>: Sets how thick or thin characters in text should be displayed.</li><li><code>text-align</code>: Aligns the text in an element (left, right, center).</li><li><code>line-height</code>: Specifies the space between lines of text.</li></ul>",
-    "initialCode": "<!DOCTYPE html>\n<html>\n<head>\n  <style>\n    body { font-family: Georgia, serif; font-size: 18px; line-height: 1.6; }\n    h1 { font-family: 'Helvetica Neue', sans-serif; font-weight: bold; text-align: center; }\n    .custom-text { color: #800080; font-style: italic; }\n  </style>\n</head>\n<body>\n  <h1>Mastering Typography</h1>\n  <p>Good typography makes a website easier to read and more visually appealing. You can control many aspects of text, like creating <span class=\"custom-text\">custom styles for emphasis</span>.</p>\n</body>\n</html>"
+    "content": "<h3>Styling Readable Text</h3><p>Typography is the art and technique of arranging type to make written language legible, readable, and appealing when displayed. Excellent typography is the foundation of high-fidelity UX.</p><h4>Core Properties</h4><ul><li><code>font-family</code>: Sets the prioritized list of fonts (e.g., `'Inter', sans-serif`).</li><li><code>font-size</code>: Specifies height (using px, rem, or em).</li><li><code>font-weight</code>: Governs thickness (e.g., <code>normal</code>, <code>bold</code>, or numeric variables like <code>500</code>).</li><li><code>line-height</code>: Dictates vertical gap between wrapped lines of text. A line height of 1.5 is standard for good legibility.</li><li><code>text-align</code>: Controls horizontal alignment (<code>left</code>, <code>center</code>, <code>right</code>, <code>justify</code>).</li></ul><h4>Key Takeaways</h4><p>Prefer **rem** (relative root em) values over absolute **px** for font sizes. `rem` adapts automatically to the user's browser settings, improving accessibility for low-vision individuals.</p>",
+    "initialCode": "<!DOCTYPE html>\n<html>\n<head>\n  <style>\n    body { font-family: Georgia, serif; font-size: 18px; line-height: 1.6; }\n    h1 { font-family: 'Helvetica Neue', sans-serif; font-weight: bold; text-align: center; }\n    .custom-text { color: #800080; font-style: italic; }\n  </style>\n</head>\n<body>\n  <h1>Mastering Typography</h1>\n  <p>Good typography makes a website easier to read and more visually appealing. You can control many aspects of text, like creating <span class=\"custom-text\">custom styles for emphasis</span>.</p>\n</body>\n</html>",
+    "quiz": [
+      {
+        "question": "Which property specifies the font or fallback font family list?",
+        "options": [
+          "font-style",
+          "font-family",
+          "font-weight",
+          "text-font"
+        ],
+        "answer": 1
+      },
+      {
+        "question": "Which property controls text thickness or boldness?",
+        "options": [
+          "font-size",
+          "font-style",
+          "font-weight",
+          "text-thickness"
+        ],
+        "answer": 2
+      },
+      {
+        "question": "Which property aligns text horizontally inside its block container?",
+        "options": [
+          "vertical-align",
+          "text-align",
+          "text-position",
+          "float"
+        ],
+        "answer": 1
+      },
+      {
+        "question": "What is the recommended standard line-height value for readable body text paragraphs?",
+        "options": [
+          "0.8",
+          "1.0",
+          "1.5 to 1.6",
+          "3.0"
+        ],
+        "answer": 2
+      }
+    ],
+    "evaluationRules": {
+      "requiredTags": [
+        "body"
+      ]
+    }
   },
   {
     "title": "14. Object-fit & Object-position",
-    "content": "<p>The <code>object-fit</code> property defines how an <code>&lt;img&gt;</code> or <code>&lt;video&gt;</code> should be resized to fit its container. This is crucial for maintaining aspect ratios without distortion.</p><ul><li><code>cover</code>: Fills the container, cropping the image if necessary.</li><li><code>contain</code>: Shows the whole image within the container, adding space if needed.</li><li><code>fill</code>: Stretches the image to fill the container (distortion likely).</li></ul>",
-    "initialCode": "<!DOCTYPE html>\n<html>\n<head>\n  <style>\n    .container { width: 300px; height: 200px; border: 2px solid black; overflow: hidden; margin-bottom: 10px; }\n    img { width: 100%; height: 100%; object-fit: cover; }\n    .contain img { object-fit: contain; }\n  </style>\n</head>\n<body>\n  <h3>Object-fit: Cover</h3>\n  <div class=\"container\">\n    <img src=\"https://picsum.photos/600/600\" alt=\"Square image in rectangular container\">\n  </div>\n  <h3>Object-fit: Contain</h3>\n  <div class=\"container contain\">\n    <img src=\"https://picsum.photos/600/600\" alt=\"Square image in rectangular container\">\n  </div>\n</body>\n</html>"
+    "content": "<h3>Controlling Media Dimensions</h3><p>When you place an image or video inside a container of different proportions, the media can stretch, squash, or display distortedly. The <code>object-fit</code> property specifies how the contents of a replaced element should be fitted to its container box.</p><h4>Core Values</h4><ul><li><strong><code>cover</code>:</strong> Fills the container box. The image scales up to fit, cropping details if the aspect ratios don't match. **Highly recommended for banners.**</li><li><strong><code>contain</code>:</strong> Fits the image inside the container completely without cropping, leaving empty gaps if proportions differ.</li><li><strong><code>fill</code>:</strong> Default value. Stretches the image to fill the exact dimensions, distorting original aspect ratios.</li></ul><h4>Key Takeaways</h4><p>You can pair `object-fit` with `object-position` (e.g., `object-position: center top`) to determine which part of the image gets cropped out when using `cover` mode.</p>",
+    "initialCode": "<!DOCTYPE html>\n<html>\n<head>\n  <style>\n    .container { width: 300px; height: 200px; border: 2px solid black; overflow: hidden; margin-bottom: 10px; }\n    img { width: 100%; height: 100%; object-fit: cover; }\n    .contain img { object-fit: contain; }\n  </style>\n</head>\n<body>\n  <h3>Object-fit: Cover</h3>\n  <div class=\"container\">\n    <img src=\"https://picsum.photos/600/600\" alt=\"Square image in rectangular container\">\n  </div>\n  <h3>Object-fit: Contain</h3>\n  <div class=\"container contain\">\n    <img src=\"https://picsum.photos/600/600\" alt=\"Square image in rectangular container\">\n  </div>\n</body>\n</html>",
+    "quiz": [
+      {
+        "question": "Which object-fit value fills a container box by scaling and cropping an image if necessary?",
+        "options": [
+          "contain",
+          "cover",
+          "fill",
+          "scale-down"
+        ],
+        "answer": 1
+      },
+      {
+        "question": "Which object-fit value scales the entire image to fit inside the container without cropping?",
+        "options": [
+          "cover",
+          "contain",
+          "fill",
+          "none"
+        ],
+        "answer": 1
+      },
+      {
+        "question": "Which HTML tags are the primary targets of the object-fit property?",
+        "options": [
+          "<div> and <section>",
+          "<img> and <video>",
+          "<form> and <input>",
+          "<h1> and <p>"
+        ],
+        "answer": 1
+      },
+      {
+        "question": "What property dictates which region of a cropped image remains visible?",
+        "options": [
+          "object-fit",
+          "object-position",
+          "clip-path",
+          "align-content"
+        ],
+        "answer": 1
+      }
+    ],
+    "evaluationRules": {
+      "requiredTags": [
+        "body"
+      ]
+    }
   },
   {
     "title": "Part 3: CSS Layout",
@@ -83,48 +755,471 @@
   },
   {
     "title": "15. The Display Property",
-    "content": "<p>The <code>display</code> property is one of the most important in CSS. Key values include:</p><ul><li><code>block</code>: The element starts on a new line and takes up the full width available (e.g., <code>&lt;p&gt;</code>, <code>&lt;div&gt;</code>).</li><li><code>inline</code>: The element does not start on a new line and only takes up as much width as necessary (e.g., <code>&lt;span&gt;</code>, <code>&lt;a&gt;</code>).</li><li><code>inline-block</code>: Like inline, but you can set a width and height.</li><li><code>none</code>: The element is completely removed from the page.</li></ul>",
-    "initialCode": "<!DOCTYPE html>\n<html>\n<head>\n  <style>\n    nav a { display: inline-block; background: steelblue; color: white; padding: 10px 15px; margin: 5px; text-decoration: none; border-radius: 5px; }\n    .hidden { display: none; }\n  </style>\n</head>\n<body>\n  <nav>\n    <a href=\"#\">Home</a>\n    <a href=\"#\">About</a>\n    <a href=\"#\">Contact</a>\n  </nav>\n  <p>The navigation links above use 'inline-block'.</p>\n  <p class=\"hidden\">You can't see this paragraph!</p>\n</body>\n</html>"
+    "content": "<h3>Configuring Layout Contexts</h3><p>The <code>display</code> property determines how an HTML element is formatted, positioned, and rendered in relation to surrounding elements in the flow.</p><h4>Core Display Formats</h4><ul><li><strong><code>block</code>:</strong> Starts on a new line and expands horizontally to fill the parent container. Sizing properties (width, height, margins) are fully respected.</li><li><strong><code>inline</code>:</strong> Renders inline with text, taking up only required width. You cannot set manual widths or heights.</li><li><strong><code>inline-block</code>:</strong> Flow matches inline text, but respects custom sizing properties. Ideal for navigation buttons.</li><li><strong><code>none</code>:</strong> Hides and completely removes the element from the layout space.</li></ul><h4>Key Takeaways</h4><p>Do not confuse `display: none` with `visibility: hidden`. `display: none` completely deletes the element's layout footprint, while `visibility: hidden` hides the element but keeps its empty space intact.</p>",
+    "initialCode": "<!DOCTYPE html>\n<html>\n<head>\n  <style>\n    nav a { display: inline-block; background: steelblue; color: white; padding: 10px 15px; margin: 5px; text-decoration: none; border-radius: 5px; }\n    .hidden { display: none; }\n  </style>\n</head>\n<body>\n  <nav>\n    <a href=\"#\">Home</a>\n    <a href=\"#\">About</a>\n    <a href=\"#\">Contact</a>\n  </nav>\n  <p>The navigation links above use 'inline-block'.</p>\n  <p class=\"hidden\">You can't see this paragraph!</p>\n</body>\n</html>",
+    "quiz": [
+      {
+        "question": "Which display type starts on a new line and expands to fill the entire horizontal space?",
+        "options": [
+          "inline",
+          "inline-block",
+          "block",
+          "flex"
+        ],
+        "answer": 2
+      },
+      {
+        "question": "Which display type flows with adjacent text elements and ignores manual width/height inputs?",
+        "options": [
+          "block",
+          "inline",
+          "inline-block",
+          "none"
+        ],
+        "answer": 1
+      },
+      {
+        "question": "Which display type flows like text but respects custom width, height, and paddings?",
+        "options": [
+          "block",
+          "inline",
+          "inline-block",
+          "flex"
+        ],
+        "answer": 2
+      },
+      {
+        "question": "What is a major difference between 'display: none' and 'visibility: hidden'?",
+        "options": [
+          "There is no functional difference",
+          "display: none removes the layout footprint; visibility: hidden hides it but retains its empty space",
+          "visibility: hidden only works in mobile viewports",
+          "display: none converts children to block tags automatically"
+        ],
+        "answer": 1
+      }
+    ],
+    "evaluationRules": {
+      "requiredTags": [
+        "body"
+      ]
+    }
   },
   {
     "title": "16. Floats & Clearing",
-    "content": "<p>Before Flexbox and Grid, <code>float</code> was used for layout. It pushes an element to the left or right, allowing text and other elements to wrap around it.</p><p>Crucially, floated elements are removed from the normal document flow, which can cause containers to collapse. Use <code>clear: both</code> or a 'clearfix' to fix this.</p>",
-    "initialCode": "<!DOCTYPE html>\n<html>\n<head>\n<style>\n  .box { width: 150px; height: 100px; background: lightcoral; margin: 10px; }\n  .float-left { float: left; }\n  .clearfix::after { content: ''; display: table; clear: both; }\n  .container { border: 2px solid black; background: #eee; }\n</style>\n</head>\n<body>\n  <div class=\"container clearfix\">\n    <div class=\"box float-left\">I am floated left</div>\n    <p>This text will wrap around the floated box. If the container didn't have the 'clearfix' class, it would collapse because it wouldn't 'see' the floated box.</p>\n  </div>\n</body>\n</html>"
+    "content": "<h3>Managing Wrapping & Legacy Columns</h3><p>Before advanced modern layout structures like Flexbox and Grid, the <code>float</code> property was the dominant method used to place columns side-by-side.</p><h4>Floating Mechanics</h4><p>Floating pushes an element to the left or right, removing it from the normal vertical block flow and allowing text to wrap closely around it. Example:</p><pre><code>img { float: left; }</code></pre><h4>The Parent Collapse Problem</h4><p>Because floated elements are pulled out of normal flow, a parent container containing only floated children will collapse to a height of 0. To resolve this, we apply a **Clearfix** or declare a clear rule:</p><pre><code>.clearfix::after {\n  content: \"\";\n  display: table;\n  clear: both;\n}</code></pre><h4>Key Takeaways</h4><p>Use floats solely for wrapping text around images. For page grids and column sections, modern tools like Flexbox and Grid are far more reliable and easier to maintain.</p>",
+    "initialCode": "<!DOCTYPE html>\n<html>\n<head>\n<style>\n  .box { width: 150px; height: 100px; background: lightcoral; margin: 10px; }\n  .float-left { float: left; }\n  .clearfix::after { content: ''; display: table; clear: both; }\n  .container { border: 2px solid black; background: #eee; }\n</style>\n</head>\n<body>\n  <div class=\"container clearfix\">\n    <div class=\"box float-left\">I am floated left</div>\n    <p>This text will wrap around the floated box. If the container didn't have the 'clearfix' class, it would collapse because it wouldn't 'see' the floated box.</p>\n  </div>\n</body>\n</html>",
+    "quiz": [
+      {
+        "question": "What was float historically heavily used for in CSS layout?",
+        "options": [
+          "Changing font sizes of headings",
+          "Creating side-by-side multi-column layouts and wrapping text around images",
+          "Adding three-dimensional shadows",
+          "Managing interactive forms"
+        ],
+        "answer": 1
+      },
+      {
+        "question": "What happens to a parent container if all its child elements are floated?",
+        "options": [
+          "It stretches to fill the viewport height",
+          "It collapses to a height of 0",
+          "It renders with high-contrast text",
+          "It automatically wraps items in columns"
+        ],
+        "answer": 1
+      },
+      {
+        "question": "Which CSS property is declared to block elements from wrapping around floated elements?",
+        "options": [
+          "float",
+          "clear",
+          "display",
+          "position"
+        ],
+        "answer": 1
+      },
+      {
+        "question": "What is the primary role of a 'clearfix' structure?",
+        "options": [
+          "To align list elements horizontally",
+          "To prevent parent container collapse caused by floated children",
+          "To remove margins from images",
+          "To fix text styles in forms"
+        ],
+        "answer": 1
+      }
+    ],
+    "evaluationRules": {
+      "requiredTags": [
+        "body"
+      ]
+    }
   },
-    {
+  {
     "title": "17. Positioning",
-    "content": "<p>The <code>position</code> property specifies the type of positioning method used for an element. Values include:</p><ul><li><code>static</code>: Default value. Elements render in order, as they appear in the document flow.</li><li><code>relative</code>: The element is positioned relative to its normal position.</li><li><code>absolute</code>: The element is positioned relative to its nearest positioned ancestor.</li><li><code>fixed</code>: The element is positioned relative to the viewport, which means it always stays in the same place even if the page is scrolled.</li><li><code>sticky</code>: A hybrid of relative and fixed positioning.</li></ul>",
-    "initialCode": "<!DOCTYPE html>\n<html>\n<head>\n<style>\n  .fixed-button { position: fixed; bottom: 20px; right: 20px; background: orange; padding: 15px; border-radius: 50%; z-index: 100; }\n  .container { position: relative; height: 300px; border: 2px solid black; }\n  .absolute-box { position: absolute; top: 40px; right: 0; width: 100px; height: 100px; background: lightblue; }\n</style>\n</head>\n<body>\n  <div class=\"container\">\n    This container is the positioning context for the blue box.\n    <div class=\"absolute-box\">Absolute</div>\n  </div>\n  <div class=\"fixed-button\">?</div>\n</body>\n</html>"
+    "content": "<h3>Controlling Element Coordinates</h3><p>The <code>position</code> property allows you to pull elements out of standard flow and place them at exact vertical/horizontal coordinates.</p><h4>Position Types</h4><ul><li><strong><code>static</code>:</strong> Default layout flow. Sizing positions (`top`, `left`, etc.) have no effect.</li><li><strong><code>relative</code>:</strong> Offsets the element relative to its default position without affecting surrounding layouts.</li><li><strong><code>absolute</code>:</strong> Positions the element at precise coordinates relative to its nearest **positioned** ancestor (anything other than static).</li><li><strong><code>fixed</code>:</strong> Pins the element to the viewport, keeping it static on scroll.</li><li><strong><code>sticky</code>:</strong> Hybrid flow. Behaves normally until a scroll threshold is met, then acts as fixed.</li></ul><h4>Key Takeaways</h4><p>When using `position: absolute` to align a button inside a card, always declare `position: relative` on the card container so the absolute coordinates calculate relative to the card border, not the whole page.</p>",
+    "initialCode": "<!DOCTYPE html>\n<html>\n<head>\n<style>\n  .fixed-button { position: fixed; bottom: 20px; right: 20px; background: orange; padding: 15px; border-radius: 50%; z-index: 100; }\n  .container { position: relative; height: 300px; border: 2px solid black; }\n  .absolute-box { position: absolute; top: 40px; right: 0; width: 100px; height: 100px; background: lightblue; }\n</style>\n</head>\n<body>\n  <div class=\"container\">\n    This container is the positioning context for the blue box.\n    <div class=\"absolute-box\">Absolute</div>\n  </div>\n  <div class=\"fixed-button\">?</div>\n</body>\n</html>",
+    "quiz": [
+      {
+        "question": "What is the default position value for HTML elements?",
+        "options": [
+          "relative",
+          "absolute",
+          "static",
+          "fixed"
+        ],
+        "answer": 2
+      },
+      {
+        "question": "Which positioning mode aligns an element relative to its nearest non-static positioned ancestor?",
+        "options": [
+          "relative",
+          "absolute",
+          "fixed",
+          "sticky"
+        ],
+        "answer": 1
+      },
+      {
+        "question": "Which positioning mode locks an element relative to the viewport, keeping it fixed on scroll?",
+        "options": [
+          "relative",
+          "absolute",
+          "fixed",
+          "static"
+        ],
+        "answer": 2
+      },
+      {
+        "question": "If you want an absolute element to align relative to its parent card, what position property must you apply to the parent card?",
+        "options": [
+          "position: absolute",
+          "position: fixed",
+          "position: relative",
+          "position: static"
+        ],
+        "answer": 2
+      }
+    ],
+    "evaluationRules": {
+      "requiredTags": [
+        "body"
+      ]
+    }
   },
   {
     "title": "18. Z-Index & Stacking Context",
-    "content": "<p>The <code>z-index</code> property controls the vertical stacking order of elements that overlap. An element with a higher z-index will appear on top of one with a lower z-index.</p><p>Note: <code>z-index</code> only works on elements that have a <code>position</code> value other than <code>static</code>.</p>",
-    "initialCode": "<!DOCTYPE html>\n<html>\n<head>\n<style>\n  .box { width: 100px; height: 100px; position: absolute; color: white; padding: 10px; }\n  .red { background: red; top: 20px; left: 20px; z-index: 2; }\n  .blue { background: blue; top: 50px; left: 50px; z-index: 1; }\n</style>\n</head>\n<body>\n  <div style=\"position: relative; height: 200px;\">\n    <div class=\"box red\">Z-index: 2</div>\n    <div class=\"box blue\">Z-index: 1</div>\n  </div>\n</body>\n</html>"
+    "content": "<h3>Managing overlapping Layers</h3><p>When you position elements, they can overlap. The <code>z-index</code> property controls the vertical stacking order along the imaginary 3D Z-axis, determining which elements sit on top.</p><h4>Rules of Z-Index</h4><ul><li>It **only works** on positioned elements (relative, absolute, fixed, or sticky). Declaring it on static elements has no effect.</li><li>Higher numbers appear in front of lower numbers. Negative numbers appear behind normal content.</li></ul><h4>Stacking Contexts</h4><p>An element's stacking order is confined to its parent's stacking context. Setting properties like `opacity: 0.9` or `filter` can create new stacking contexts, isolating layer calculations.</p><h4>Key Takeaways</h4><p>Avoid using massive arbitrary values like `z-index: 99999`. Plan a structured layer budget (e.g., dropdowns = 10, headers = 50, modals = 100) to keep layer overlapping manageable.</p>",
+    "initialCode": "<!DOCTYPE html>\n<html>\n<head>\n<style>\n  .box { width: 100px; height: 100px; position: absolute; color: white; padding: 10px; }\n  .red { background: red; top: 20px; left: 20px; z-index: 2; }\n  .blue { background: blue; top: 50px; left: 50px; z-index: 1; }\n</style>\n</head>\n<body>\n  <div style=\"position: relative; height: 200px;\">\n    <div class=\"box red\">Z-index: 2</div>\n    <div class=\"box blue\">Z-index: 1</div>\n  </div>\n</body>\n</html>",
+    "quiz": [
+      {
+        "question": "What does the z-index property control in CSS layout?",
+        "options": [
+          "The scale size of an element",
+          "The horizontal flow order",
+          "The vertical stacking order of overlapping positioned elements along the Z-axis",
+          "The transparency of borders"
+        ],
+        "answer": 2
+      },
+      {
+        "question": "On which element types does the z-index property take effect?",
+        "options": [
+          "Only on static block elements",
+          "Only on positioned elements (relative, absolute, fixed, sticky)",
+          "Only on form labels and buttons",
+          "Every element regardless of position setting"
+        ],
+        "answer": 1
+      },
+      {
+        "question": "If element A has 'z-index: 5' and 'position: absolute', and element B has 'z-index: 2' and 'position: absolute', which renders on top?",
+        "options": [
+          "Element A",
+          "Element B",
+          "They render side-by-side",
+          "The browser decides based on source order"
+        ],
+        "answer": 0
+      },
+      {
+        "question": "What is a Stacking Context in CSS layout?",
+        "options": [
+          "A folder structure in the workspace",
+          "A three-dimensional grouping that isolates layer calculations for its children",
+          "A grid tracking database",
+          "A set of animation frames"
+        ],
+        "answer": 1
+      }
+    ],
+    "evaluationRules": {
+      "requiredTags": [
+        "body"
+      ]
+    }
   },
   {
     "title": "19. Introduction to Flexbox",
-    "content": "<p>Flexbox is a modern layout model for arranging items in a single dimension (a row or a column). To use it, create a 'flex container' by setting an element's <code>display</code> property to <code>flex</code>.</p><p>Use <code>justify-content</code> for horizontal alignment and <code>align-items</code> for vertical alignment on the container. Try changing their values to <code>center</code> or <code>space-between</code>.</p>",
-    "initialCode": "<!DOCTYPE html>\n<html>\n<head>\n  <style>\n    .container {\n      display: flex;\n      justify-content: space-around;\n      align-items: center;\n      background-color: #e5e7eb;\n      height: 250px;\n      padding: 10px;\n      border-radius: 8px;\n    }\n    .item {\n      background-color: #4f46e5;\n      color: white;\n      padding: 25px;\n      border-radius: 4px;\n      font-size: 20px;\n    }\n  </style>\n</head>\n<body>\n  <div class=\"container\">\n    <div class=\"item\">Item 1</div>\n    <div class=\"item\">Item 2</div>\n    <div class=\"item\">Item 3</div>\n  </div>\n</body>\n</html>"
+    "content": "<h3>Designing 1D Layouts</h3><p><strong>Flexbox (Flexible Box Layout)</strong> is a powerful 1D layout model designed to distribute space and align items along a single axis (either horizontally in a row or vertically in a column).</p><h4>Defining Flex Containers</h4><p>To start, set <code>display: flex</code> on the parent element. This turns the parent into a **Flex Container** and its immediate children into **Flex Items**.</p><h4>Alignment Controls</h4><ul><li><code>flex-direction</code>: Sets the axis flow (e.g., <code>row</code>, <code>column</code>).</li><li><code>justify-content</code>: Aligns flex items along the **main axis** (e.g., <code>center</code>, <code>space-between</code>, <code>flex-end</code>).</li><li><code>align-items</code>: Aligns flex items along the **cross axis** (e.g., <code>center</code>, <code>stretch</code>).</li></ul><h4>Key Takeaways</h4><p>Flexbox simplifies centering! Setting both `justify-content: center` and `align-items: center` perfectly centers child content vertically and horizontally inside the container.</p>",
+    "initialCode": "<!DOCTYPE html>\n<html>\n<head>\n  <style>\n    .container {\n      display: flex;\n      justify-content: space-around;\n      align-items: center;\n      background-color: #e5e7eb;\n      height: 250px;\n      padding: 10px;\n      border-radius: 8px;\n    }\n    .item {\n      background-color: #4f46e5;\n      color: white;\n      padding: 25px;\n      border-radius: 4px;\n      font-size: 20px;\n    }\n  </style>\n</head>\n<body>\n  <div class=\"container\">\n    <div class=\"item\">Item 1</div>\n    <div class=\"item\">Item 2</div>\n    <div class=\"item\">Item 3</div>\n  </div>\n</body>\n</html>",
+    "quiz": [
+      {
+        "question": "Which display value turns an element into a Flex Container?",
+        "options": [
+          "display: block",
+          "display: flex",
+          "display: grid",
+          "display: inline-block"
+        ],
+        "answer": 1
+      },
+      {
+        "question": "Which flexbox property aligns items along the primary Main Axis?",
+        "options": [
+          "align-items",
+          "justify-content",
+          "align-content",
+          "flex-direction"
+        ],
+        "answer": 1
+      },
+      {
+        "question": "Which flexbox property aligns items along the perpendicular Cross Axis?",
+        "options": [
+          "justify-content",
+          "align-items",
+          "flex-wrap",
+          "grid-align"
+        ],
+        "answer": 1
+      },
+      {
+        "question": "What is the default layout direction of a Flex container?",
+        "options": [
+          "column",
+          "row",
+          "grid-flow",
+          "wrap"
+        ],
+        "answer": 1
+      }
+    ],
+    "evaluationRules": {
+      "requiredTags": [
+        "body"
+      ]
+    }
   },
   {
     "title": "20. Advanced Flexbox (Autolayout)",
-    "content": "<p>Beyond alignment, Flexbox allows items to grow or shrink to fill space. This is often called 'Autolayout' in design tools.</p><ul><li><code>flex-grow</code>: How much an item should grow relative to others.</li><li><code>flex-shrink</code>: How much an item should shrink if space is tight.</li><li><code>flex-basis</code>: The initial size of an item.</li><li><code>gap</code>: The space between items.</li></ul>",
-    "initialCode": "<!DOCTYPE html>\n<html>\n<head>\n<style>\n  .container { display: flex; gap: 20px; background: #eee; padding: 20px; }\n  .item { background: #4f46e5; color: white; padding: 20px; }\n  .grow { flex-grow: 1; background: #ec4899; } /* This item will take up all remaining space */\n</style>\n</head>\n<body>\n  <div class=\"container\">\n    <div class=\"item\">Fixed</div>\n    <div class=\"item grow\">I Grow!</div>\n    <div class=\"item\">Fixed</div>\n  </div>\n</body>\n</html>"
+    "content": "<h3>Responsive Flex items</h3><p>Beyond alignment, Flexbox is powerful because flex items can automatically expand or contract to fill up available space based on viewport boundaries.</p><h4>Item Sizing Variables</h4><ul><li><code>flex-grow</code>: Dictates if a flex item should grow to occupy remaining empty space, relative to sibling items (e.g., <code>flex-grow: 1</code>).</li><li><code>flex-shrink</code>: Controls if an item can shrink if the viewport is too small.</li><li><code>flex-basis</code>: The starting size of an item before growing/shrinking occurs.</li><li><code>gap</code>: Defines space between adjacent items cleanly, without adding margins to edges.</li></ul><h4>Key Takeaways</h4><p>Use the combined shorthand `flex: 1` on columns in a flex row to force all columns to grow, shrink, and distribute horizontal space equally.</p>",
+    "initialCode": "<!DOCTYPE html>\n<html>\n<head>\n<style>\n  .container { display: flex; gap: 20px; background: #eee; padding: 20px; }\n  .item { background: #4f46e5; color: white; padding: 20px; }\n  .grow { flex-grow: 1; background: #ec4899; } /* This item will take up all remaining space */\n</style>\n</head>\n<body>\n  <div class=\"container\">\n    <div class=\"item\">Fixed</div>\n    <div class=\"item grow\">I Grow!</div>\n    <div class=\"item\">Fixed</div>\n  </div>\n</body>\n</html>",
+    "quiz": [
+      {
+        "question": "Which property allows a flex item to expand and occupy remaining empty container space?",
+        "options": [
+          "flex-shrink",
+          "flex-grow",
+          "flex-basis",
+          "flex-wrap"
+        ],
+        "answer": 1
+      },
+      {
+        "question": "What property sets the initial structural size of a flex item before spacing adjustments occur?",
+        "options": [
+          "flex-basis",
+          "flex-grow",
+          "flex-shrink",
+          "flex-auto"
+        ],
+        "answer": 0
+      },
+      {
+        "question": "What CSS property sets simple margins between flex items without applying them to outer container borders?",
+        "options": [
+          "margin",
+          "padding",
+          "gap",
+          "flex-spacing"
+        ],
+        "answer": 2
+      },
+      {
+        "question": "What elements are combined in the standard CSS shorthand 'flex: 1 0 auto;'?",
+        "options": [
+          "flex-grow, flex-shrink, and flex-basis",
+          "flex-direction, justify-content, and gap",
+          "margin, padding, and width",
+          "align-items, align-content, and justify-items"
+        ],
+        "answer": 0
+      }
+    ],
+    "evaluationRules": {
+      "requiredTags": [
+        "body"
+      ]
+    }
   },
   {
     "title": "21. Introduction to Grid",
-    "content": "<p>CSS Grid is a powerful 2-dimensional layout system, allowing you to control rows and columns simultaneously. Start by setting <code>display: grid</code> on a container.</p><p>Use <code>grid-template-columns</code> to define the number and size of columns. The <code>fr</code> unit represents a fraction of the available space, which is very useful for flexible layouts. Use <code>gap</code> to set the space between grid items.</p>",
-    "initialCode": "<!DOCTYPE html>\n<html>\n<head>\n  <style>\n    .grid-container {\n      display: grid;\n      grid-template-columns: repeat(3, 1fr); /* Three equal columns */\n      gap: 15px;\n      background-color: #f1f5f9;\n      padding: 15px;\n    }\n    .grid-item {\n      background-color: #2563eb;\n      color: white;\n      padding: 30px;\n      text-align: center;\n      font-size: 24px;\n      border-radius: 5px;\n    }\n  </style>\n</head>\n<body>\n  <div class=\"grid-container\">\n    <div class=\"grid-item\">1</div>\n    <div class=\"grid-item\">2</div>\n    <div class=\"grid-item\">3</div>\n    <div class=\"grid-item\">4</div>\n    <div class=\"grid-item\">5</div>\n    <div class=\"grid-item\">6</div>\n  </div>\n</body>\n</html>"
+    "content": "<h3>Designing 2D Layouts</h3><p>While Flexbox is designed for single-dimension layouts (either columns or rows), <strong>CSS Grid</strong> is a robust 2D layout model, allowing you to manage rows and columns simultaneously.</p><h4>Initializing a Grid</h4><p>Set <code>display: grid</code> on the parent element. This initializes the grid context. You can define exact columns and spacing cleanly:</p><pre><code>.grid-container {\n  display: grid;\n  grid-template-columns: repeat(3, 1fr);\n  gap: 16px;\n}</code></pre><h4>The Fraction Unit (<code>fr</code>)</h4><p>The <code>fr</code> unit represents a flexible fraction of available space. Three columns sized as `1fr 1fr 1fr` will scale dynamically to occupy exactly one-third of the container width each.</p><h4>Key Takeaways</h4><p>Grid is exceptionally powerful for product dashboards, card lists, and master layout templates where items need to align cleanly in columns and rows.</p>",
+    "initialCode": "<!DOCTYPE html>\n<html>\n<head>\n  <style>\n    .grid-container {\n      display: grid;\n      grid-template-columns: repeat(3, 1fr); /* Three equal columns */\n      gap: 15px;\n      background-color: #f1f5f9;\n      padding: 15px;\n    }\n    .grid-item {\n      background-color: #2563eb;\n      color: white;\n      padding: 30px;\n      text-align: center;\n      font-size: 24px;\n      border-radius: 5px;\n    }\n  </style>\n</head>\n<body>\n  <div class=\"grid-container\">\n    <div class=\"grid-item\">1</div>\n    <div class=\"grid-item\">2</div>\n    <div class=\"grid-item\">3</div>\n    <div class=\"grid-item\">4</div>\n    <div class=\"grid-item\">5</div>\n    <div class=\"grid-item\">6</div>\n  </div>\n</body>\n</html>",
+    "quiz": [
+      {
+        "question": "Which display property turns a container into a two-dimensional grid context?",
+        "options": [
+          "display: flex",
+          "display: grid",
+          "display: table",
+          "display: flex-grid"
+        ],
+        "answer": 1
+      },
+      {
+        "question": "What does the 'fr' unit represent in CSS Grid layout calculations?",
+        "options": [
+          "Fixed Row height",
+          "Fraction of available container space",
+          "Font Ratio relative sizes",
+          "Fluid responsive boundaries"
+        ],
+        "answer": 1
+      },
+      {
+        "question": "How do you define a grid container with exactly 3 equal columns in CSS?",
+        "options": [
+          "grid-template-columns: repeat(3, 1fr);",
+          "grid-columns: 3;",
+          "grid-template-columns: 33px 33px 33px;",
+          "grid-layout: 3-cols;"
+        ],
+        "answer": 0
+      },
+      {
+        "question": "Which property sets custom spaces between grid cells?",
+        "options": [
+          "padding",
+          "margin",
+          "gap",
+          "border-spacing"
+        ],
+        "answer": 2
+      }
+    ],
+    "evaluationRules": {
+      "requiredTags": [
+        "body"
+      ]
+    }
   },
   {
     "title": "22. Advanced Grid",
-    "content": "<p>CSS Grid can create complex layouts easily using <code>grid-template-areas</code> or <code>auto-fit/auto-fill</code> with <code>minmax()</code> for responsive designs without media queries.</p><p>In the example below, the grid will automatically add as many columns as possible that are at least 200px wide.</p>",
-    "initialCode": "<!DOCTYPE html>\n<html>\n<head>\n<style>\n  .grid {\n    display: grid;\n    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));\n    gap: 10px;\n  }\n  .item { background: #10b981; color: white; padding: 40px; text-align: center; }\n</style>\n</head>\n<body>\n  <div class=\"grid\">\n    <div class=\"item\">Card 1</div>\n    <div class=\"item\">Card 2</div>\n    <div class=\"item\">Card 3</div>\n    <div class=\"item\">Card 4</div>\n  </div>\n</body>\n</html>"
+    "content": "<h3>Fluid Layouts without Media Queries</h3><p>In addition to basic columns, CSS Grid provides complex structural patterns that allow you to build completely fluid, responsive grids that adapt dynamically to any mobile device without declaring dozens of media queries.</p><h4>Auto-Fit & MinMax</h4><p>By pairing <code>auto-fit</code> with the <code>minmax()</code> function, you instruct the grid to fit as many columns as possible that are at least a minimum size (e.g. 200px), stretching them to fill available horizontal space:</p><pre><code>grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));</code></pre><h4>Grid Areas</h4><p>You can also map out layouts visually using names with the <code>grid-template-areas</code> property, making site wireframing highly descriptive and legible.</p><h4>Key Takeaways</h4><p>Using `repeat(auto-fit, minmax(...))` is highly recommended for e-commerce product grids, allowing cards to wrap automatically from mobile up to widescreen displays.</p>",
+    "initialCode": "<!DOCTYPE html>\n<html>\n<head>\n<style>\n  .grid {\n    display: grid;\n    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));\n    gap: 10px;\n  }\n  .item { background: #10b981; color: white; padding: 40px; text-align: center; }\n</style>\n</head>\n<body>\n  <div class=\"grid\">\n    <div class=\"item\">Card 1</div>\n    <div class=\"item\">Card 2</div>\n    <div class=\"item\">Card 3</div>\n    <div class=\"item\">Card 4</div>\n  </div>\n</body>\n</html>",
+    "quiz": [
+      {
+        "question": "What does grid-template-areas allow you to do?",
+        "options": [
+          "Connect external images to grid templates",
+          "Map out page wireframes visually in CSS using text area name strings",
+          "Adjust vertical margin spacing",
+          "Set fluid safe area padding boundaries"
+        ],
+        "answer": 1
+      },
+      {
+        "question": "Which column formula creates responsive columns that wrap dynamically without media queries?",
+        "options": [
+          "repeat(3, 300px);",
+          "repeat(auto-fit, minmax(200px, 1fr));",
+          "1fr 1fr 1fr;",
+          "repeat(fluid, auto);"
+        ],
+        "answer": 1
+      },
+      {
+        "question": "What is a main difference between 'auto-fit' and 'auto-fill' in Grid?",
+        "options": [
+          "auto-fit collapses empty column tracks; auto-fill preserves them",
+          "auto-fill collapses empty column tracks; auto-fit preserves them",
+          "auto-fit only works on desktops",
+          "auto-fill disables custom gap sizing"
+        ],
+        "answer": 0
+      },
+      {
+        "question": "Which property specifies exactly which horizontal columns a grid child spans?",
+        "options": [
+          "grid-row",
+          "grid-column",
+          "grid-area",
+          "column-span"
+        ],
+        "answer": 1
+      }
+    ],
+    "evaluationRules": {
+      "requiredTags": [
+        "body"
+      ]
+    }
   },
   {
     "title": "23. The 'Auto' Keyword & Aspect Ratio",
-    "content": "<p>The <code>auto</code> keyword is powerful for margins (e.g., <code>margin: auto</code> for centering) and sizes. Additionally, the <code>aspect-ratio</code> property ensures elements maintain a specific shape (like 16/9 for video) regardless of width.</p>",
-    "initialCode": "<!DOCTYPE html>\n<html>\n<head>\n<style>\n  .centered-box {\n    width: 200px;\n    margin: 40px auto; /* Centers horizontally */\n    background: gold;\n    padding: 20px;\n    text-align: center;\n  }\n  .video-placeholder {\n    width: 100%;\n    aspect-ratio: 16 / 9;\n    background: #333;\n    color: white;\n    display: flex;\n    align-items: center;\n    justify-content: center;\n  }\n</style>\n</head>\n<body>\n  <div class=\"centered-box\">I am centered!</div>\n  <div class=\"video-placeholder\">16:9 Aspect Ratio</div>\n</body>\n</html>"
+    "content": "<h3>Managing Sizing Constraints</h3><p>To design responsive layouts that scale cleanly without cropping, you must understand how to control margins and maintain dimensions using the auto keyword and aspect ratio controls.</p><h4>Centering with <code>margin: auto</code></h4><p>When you set fixed width constraints on block elements, declaring <code>margin: 0 auto</code> instructs the browser to calculate all remaining horizontal space in the parent container and split it equally between the left and right margins, perfectly centering the box.</p><h4>Aspect Ratio</h4><p>The <code>aspect-ratio</code> property ensures elements maintain exact box proportions regardless of parent width scaling (e.g., <code>aspect-ratio: 16 / 9</code> for video player players):</p><pre><code>.player {\n  width: 100%;\n  aspect-ratio: 16 / 9;\n}</code></pre><h4>Key Takeaways</h4><p>Using `aspect-ratio` is a great way to prevent **CLS (Cumulative Layout Shift)** because the browser reserves the correct blank frame space for video players or banners before the actual media files finish downloading.</p>",
+    "initialCode": "<!DOCTYPE html>\n<html>\n<head>\n<style>\n  .centered-box {\n    width: 200px;\n    margin: 40px auto; /* Centers horizontally */\n    background: gold;\n    padding: 20px;\n    text-align: center;\n  }\n  .video-placeholder {\n    width: 100%;\n    aspect-ratio: 16 / 9;\n    background: #333;\n    color: white;\n    display: flex;\n    align-items: center;\n    justify-content: center;\n  }\n</style>\n</head>\n<body>\n  <div class=\"centered-box\">I am centered!</div>\n  <div class=\"video-placeholder\">16:9 Aspect Ratio</div>\n</body>\n</html>",
+    "quiz": [
+      {
+        "question": "How does setting 'margin: auto' center a block element horizontally?",
+        "options": [
+          "It forces the browser to align text in the center",
+          "It splits the remaining horizontal container space equally between left and right margins",
+          "It moves the element coordinates absolutely",
+          "It decreases the element's width to fit the grid"
+        ],
+        "answer": 1
+      },
+      {
+        "question": "What box constraint is enforced by 'aspect-ratio: 16 / 9'?",
+        "options": [
+          "It sets width to exactly 1600px and height to 900px",
+          "It locks the proportions of width to height at a constant 16:9 ratio",
+          "It divides columns in the grid",
+          "It disables overflow rendering"
+        ],
+        "answer": 1
+      },
+      {
+        "question": "What happens if you set width to 'auto' on a block element by default?",
+        "options": [
+          "It shrinks to 0px wide",
+          "It stretches horizontally to fill available parent container space",
+          "It turns into a circle",
+          "It requires absolute positioning"
+        ],
+        "answer": 1
+      },
+      {
+        "question": "Why is 'aspect-ratio' helpful for Core Web Vitals (SEO)?",
+        "options": [
+          "It compresses visual images automatically",
+          "It reserves frame space to prevent Cumulative Layout Shift (CLS)",
+          "It speeds up file uploads",
+          "It reduces HTML tag weights"
+        ],
+        "answer": 1
+      }
+    ],
+    "evaluationRules": {
+      "requiredTags": [
+        "body"
+      ]
+    }
   },
   {
     "title": "Part 4: Advanced CSS",
@@ -132,33 +1227,315 @@
   },
   {
     "title": "24. Pseudo-classes & Elements",
-    "content": "<p>Pseudo-classes are keywords added to selectors that specify a special state of the selected element(s). For example, <code>:hover</code> applies a style when you move your mouse over an element.</p><p>Pseudo-elements are keywords added to a selector that lets you style a specific part of the selected element(s). For example, <code>::before</code> creates a pseudo-element that is the first child of the selected element.</p>",
-    "initialCode": "<!DOCTYPE html>\n<html>\n<head>\n<style>\n  button { background-color: #2563eb; color: white; padding: 10px 20px; border: none; border-radius: 5px; cursor: pointer; }\n  button:hover { background-color: #1d4ed8; }\n  p::first-line { font-weight: bold; color: #15803d; }\n  a::after { content: ' (link)'; font-size: 0.8em; }\n</style>\n</head>\n<body>\n  <button>Hover Over Me</button>\n  <p>This is a paragraph. The first line of this text will be bold and green. The rest of the paragraph will be normal.</p>\n  <a href=\"#\">Example</a>\n</body>\n</html>"
+    "content": "<h3>Targeting States & Sub-parts</h3><p>We use standard class/ID selectors to style real DOM elements. But what if we want to style an element only when a user hovers their mouse over it? Or style only the first line of a paragraph? We use pseudo-selectors for this.</p><h4>1. Pseudo-classes (<code>:state</code>)</h4><p>Used to style elements in a **special state**. Examples:</p><ul><li><code>:hover</code>: Applies styles when user hovers mouse over it.</li><li><code>:focus</code>: Styles input controls when actively clicked/focused.</li><li><code>:first-child</code>: Targets the first sibling item inside a container.</li></ul><h4>2. Pseudo-elements (<code>::subpart</code>)</h4><p>Used to style a **specific sub-part** of an element, or inject content:</p><ul><li><code>::before</code> & <code>::after</code>: Creates a virtual element inside the targeted tag, often used to inject small icons or structural details.</li></ul><h4>Key Takeaways</h4><p>By convention, pseudo-classes use a single colon (<code>:hover</code>) and pseudo-elements use double colons (<code>::before</code>) to make distinguishing them simple.</p>",
+    "initialCode": "<!DOCTYPE html>\n<html>\n<head>\n<style> \n  button { background-color: #2563eb; color: white; padding: 10px 20px; border: none; border-radius: 5px; cursor: pointer; }\n  button:hover { background-color: #1d4ed8; }\n  p::first-line { font-weight: bold; color: #15803d; }\n  a::after { content: ' (link)'; font-size: 0.8em; }\n</style>\n</head>\n<body>\n  <button>Hover Over Me</button>\n  <p>This is a paragraph. The first line of this text will be bold and green. The rest of the paragraph will be normal.</p>\n  <a href=\"#\">Example</a>\n</body>\n</html>",
+    "quiz": [
+      {
+        "question": "Which pseudo-class applies custom visual styles when a mouse pointer rests over an element?",
+        "options": [
+          ":focus",
+          ":hover",
+          ":active",
+          ":visited"
+        ],
+        "answer": 1
+      },
+      {
+        "question": "Which pseudo-element is used to inject custom content before the targeted element's internal text?",
+        "options": [
+          "::before",
+          "::after",
+          "::first-letter",
+          "::marker"
+        ],
+        "answer": 0
+      },
+      {
+        "question": "What is the standard notation convention for distinguishing pseudo-elements from pseudo-classes in modern CSS?",
+        "options": [
+          "Classes use double colons (::); elements use single colons (:)",
+          "Classes use single colons (:); elements use double colons (::)",
+          "There is no difference in spelling",
+          "Elements are placed inside parent brackets"
+        ],
+        "answer": 1
+      },
+      {
+        "question": "Which pseudo-class targets only the first matching tag inside a parent element?",
+        "options": [
+          ":first-line",
+          ":first-child",
+          ":only-child",
+          ":active"
+        ],
+        "answer": 1
+      }
+    ],
+    "evaluationRules": {
+      "requiredTags": [
+        "body"
+      ]
+    }
   },
   {
     "title": "25. Transitions",
-    "content": "<p>CSS transitions allow you to change property values smoothly (over a given duration). To create a transition effect, you must specify two things: the CSS property you want to add an effect to, and the duration of the effect.</p><p>In the example, we are transitioning the <code>background-color</code> and <code>transform</code> properties over 0.3 seconds.</p>",
-    "initialCode": "<!DOCTYPE html>\n<html>\n<head>\n<style>\n  .box {\n    width: 100px;\n    height: 100px;\n    background-color: red;\n    transition: background-color 0.3s, transform 0.3s;\n  }\n  .box:hover {\n    background-color: blue;\n    transform: rotate(45deg) scale(1.2);\n  }\n</style>\n</head>\n<body>\n  <div class=\"box\"></div>\n</body>\n</html>"
+    "content": "<h3>Animating State Changes</h3><p>By default, when you hover over a button and change its background color, the change occurs instantly. The <code>transition</code> property allows you to animate property changes smoothly over a set duration.</p><h4>Declaring Transitions</h4><p>To create a transition, you must specify the properties you want to transition and the duration: </p><pre><code>button {\n  background-color: blue;\n  transition: background-color 0.3s ease-in-out;\n}\nbutton:hover {\n  background-color: indigo;\n}</code></pre><h4>Parameters</h4><ul><li><strong>transition-property:</strong> The CSS property to monitor (e.g. `background-color`, `transform`, `all`).</li><li><strong>transition-duration:</strong> How long the animation runs (e.g. `0.3s`, `500ms`).</li><li><strong>transition-timing-function:</strong> The mathematical curve of speed (e.g. `linear`, `ease-in-out`).</li></ul><h4>Key Takeaways</h4><p>Transitions must be declared on the **base element selector**, not on the hover/focus selector. This ensures the animation plays smoothly both on hover-in and hover-out.</p>",
+    "initialCode": "<!DOCTYPE html>\n<html>\n<head>\n<style>\n  .box {\n    width: 100px;\n    height: 100px;\n    background-color: red;\n    transition: background-color 0.3s, transform 0.3s;\n  }\n  .box:hover {\n    background-color: blue;\n    transform: rotate(45deg) scale(1.2);\n  }\n</style>\n</head>\n<body>\n  <div class=\"box\"></div>\n</body>\n</html>",
+    "quiz": [
+      {
+        "question": "What is the primary purpose of the CSS transition property?",
+        "options": [
+          "To translate an element along the X and Y coordinates",
+          "To animate property changes smoothly over a specified duration",
+          "To convert inline tags to block formats",
+          "To speed up site page loading"
+        ],
+        "answer": 1
+      },
+      {
+        "question": "What are the two mandatory parameters needed to configure a transition?",
+        "options": [
+          "Color and sizing variables",
+          "CSS property name and transition duration",
+          "Scale coefficients and timing delays",
+          "Hover selectors and active coordinates"
+        ],
+        "answer": 1
+      },
+      {
+        "question": "Where must the transition property be declared to ensure it plays both on hover-in and hover-out?",
+        "options": [
+          "On the hover selector (e.g., :hover)",
+          "On the base element selector",
+          "Inside the global body stylesheet",
+          "Inside a separate keyframes block"
+        ],
+        "answer": 1
+      },
+      {
+        "question": "Which timing function starts slow, accelerates in the middle, and decelerates at the end?",
+        "options": [
+          "linear",
+          "ease-in",
+          "ease-out",
+          "ease-in-out"
+        ],
+        "answer": 3
+      }
+    ],
+    "evaluationRules": {
+      "requiredTags": [
+        "body"
+      ]
+    }
   },
   {
     "title": "26. CSS Animations (@keyframes)",
-    "content": "<p>While transitions move from state A to B, <code>@keyframes</code> allow for complex, multi-step animations. You define the steps (0% to 100%) and then apply them with the <code>animation</code> property.</p>",
-    "initialCode": "<!DOCTYPE html>\n<html>\n<head>\n<style>\n  @keyframes bounce {\n    0%, 100% { transform: translateY(0); }\n    50% { transform: translateY(-50px); }\n  }\n  .ball {\n    width: 50px;\n    height: 50px;\n    background: orange;\n    border-radius: 50%;\n    animation: bounce 1s infinite ease-in-out;\n  }\n</style>\n</head>\n<body>\n  <div class=\"ball\"></div>\n</body>\n</html>"
+    "content": "<h3>Crafting Complex Multi-step Animations</h3><p>Transitions smoothly move elements from state A to state B. But if you want to build complex, looping, multi-step animations (like a bouncing ball, looping loading spinners, or wave patterns), you need keyframe animations.</p><h4>1. Define the Keyframes</h4><p>Use the <code>@keyframes</code> directive to map out the visual properties at different timeline percentages (from 0% up to 100%):</p><pre><code>@keyframes slide {\n  0% { transform: translateX(0); }\n  50% { transform: translateX(100px); }\n  100% { transform: translateX(0); }\n}</code></pre><h4>2. Apply to the Element</h4><p>Assign the animation by referencing its name and properties:</p><pre><code>.box {\n  animation: slide 2s infinite ease;\n}</code></pre><h4>Key Takeaways</h4><p>Use keyframe animations wisely. Overusing heavy animations can strain users' device batteries and cpu, degrading overall system performance.</p>",
+    "initialCode": "<!DOCTYPE html>\n<html>\n<head>\n<style>\n  @keyframes bounce {\n    0%, 100% { transform: translateY(0); }\n    50% { transform: translateY(-50px); }\n  }\n  .ball {\n    width: 50px;\n    height: 50px;\n    background: orange;\n    border-radius: 50%;\n    animation: bounce 1s infinite ease-in-out;\n  }\n</style>\n</head>\n<body>\n  <div class=\"ball\"></div>\n</body>\n</html>",
+    "quiz": [
+      {
+        "question": "Which directive is declared in CSS to define custom multi-step animation keyframes?",
+        "options": [
+          "@animate",
+          "@keyframes",
+          "@transitions",
+          "@motion"
+        ],
+        "answer": 1
+      },
+      {
+        "question": "How do you apply a keyframes animation named 'bounce' to run continuously?",
+        "options": [
+          "animation: bounce 1s endless;",
+          "animation: bounce 1s infinite;",
+          "animation: bounce loop;",
+          "transition: bounce 1s loops;"
+        ],
+        "answer": 1
+      },
+      {
+        "question": "What is the standard name of the starting timeline step inside keyframes?",
+        "options": [
+          "start",
+          "0% or 'from'",
+          "0s",
+          "origin"
+        ],
+        "answer": 1
+      },
+      {
+        "question": "Which animation property sets whether it alternates direction on alternate loops?",
+        "options": [
+          "animation-iteration-count",
+          "animation-direction",
+          "animation-fill-mode",
+          "animation-play-state"
+        ],
+        "answer": 1
+      }
+    ],
+    "evaluationRules": {
+      "requiredTags": [
+        "body"
+      ]
+    }
   },
   {
     "title": "27. CSS Variables",
-    "content": "<p>CSS Variables (Custom Properties) allow you to store values and reuse them throughout your stylesheet. They start with <code>--</code> and are accessed using the <code>var()</code> function.</p><p>We typically define variables inside the <code>:root</code> selector. <code>:root</code> matches the highest-level element in the document (usually the <code>&lt;html&gt;</code> tag), making those variables 'global' and available to every other element on the page.</p>",
-    "initialCode": "<!DOCTYPE html>\n<html>\n<head>\n<style>\n  :root {\n    --primary-color: #6366f1;\n    --secondary-color: #a855f7;\n    --padding: 20px;\n  }\n  .card {\n    background: var(--primary-color);\n    color: white;\n    padding: var(--padding);\n    border-radius: 10px;\n    box-shadow: 0 4px 6px var(--secondary-color);\n  }\n</style>\n</head>\n<body>\n  <div class=\"card\">Styled with CSS Variables</div>\n</body>\n</html>"
+    "content": "<h3>Managing Scalable Codebases</h3><p>In massive stylesheets, you might declare the same primary theme color hundreds of times. If you decide to change that color later, manual editing is exhausting. **CSS Variables (Custom Properties)** solve this problem.</p><h4>Declaring Variables</h4><p>Custom variables are defined starting with a **double dash (<code>--</code>)**. We place them inside the <code>:root</code> selector so they are globally accessible down the entire DOM hierarchy:</p><pre><code>:root {\n  --primary-color: #6366f1;\n}</code></pre><h4>Accessing Variables</h4><p>Read and apply variable values using the <code>var()</code> function:</p><pre><code>h1 {\n  color: var(--primary-color);\n}</code></pre><h4>Key Takeaways</h4><p>You can define fallback options in case a variable is missing: `var(--theme-color, blue)`. This is essential for robust, crash-free CSS layouts.</p>",
+    "initialCode": "<!DOCTYPE html>\n<html>\n<head>\n<style>\n  :root {\n    --primary-color: #6366f1;\n    --secondary-color: #a855f7;\n    --padding: 20px;\n  }\n  .card {\n    background: var(--primary-color);\n    color: white;\n    padding: var(--padding);\n    border-radius: 10px;\n    box-shadow: 0 4px 6px var(--secondary-color);\n  }\n</style>\n</head>\n<body>\n  <div class=\"card\">Styled with CSS Variables</div>\n</body>\n</html>",
+    "quiz": [
+      {
+        "question": "What prefix is used to declare a custom CSS variable?",
+        "options": [
+          "$ (dollar)",
+          "@ (at)",
+          "-- (double dash)",
+          "++ (double plus)"
+        ],
+        "answer": 2
+      },
+      {
+        "question": "Which CSS function retrieves and applies variable values?",
+        "options": [
+          "get()",
+          "var()",
+          "read()",
+          "val()"
+        ],
+        "answer": 1
+      },
+      {
+        "question": "Why are global CSS variables typically defined inside the ':root' selector?",
+        "options": [
+          "To lock browser widths",
+          "To make variables globally accessible to all elements downstream in the DOM",
+          "To increase site speed",
+          "To hide variables from inspect tools"
+        ],
+        "answer": 1
+      },
+      {
+        "question": "How do you provide a fallback value of 'red' if a variable named '--primary' is not loaded?",
+        "options": [
+          "var(--primary, red)",
+          "var(--primary) || red",
+          "var(--primary) fallback(red)",
+          "--primary: red || var()"
+        ],
+        "answer": 0
+      }
+    ],
+    "evaluationRules": {
+      "requiredTags": [
+        "body"
+      ]
+    }
   },
   {
     "title": "28. Filters & Backdrop-filters",
-    "content": "<p>The <code>filter</code> property applies visual effects like blur or color shifting to an element. <code>backdrop-filter</code> applies the effect to the area *behind* the element (great for glassmorphism).</p>",
-    "initialCode": "<!DOCTYPE html>\n<html>\n<head>\n<style>\n  .bg { background: url('https://picsum.photos/800/600'); width: 100%; height: 300px; display: flex; align-items: center; justify-content: center; }\n  .glass {\n    background: rgba(255, 255, 255, 0.2);\n    backdrop-filter: blur(10px);\n    padding: 30px;\n    border-radius: 15px;\n    border: 1px solid rgba(255, 255, 255, 0.3);\n    color: white;\n    font-weight: bold;\n  }\n</style>\n</head>\n<body>\n  <div class=\"bg\">\n    <div class=\"glass\">Glassmorphism Effect</div>\n  </div>\n</body>\n</html>"
+    "content": "<h3>Premium Visual Effects</h3><p>CSS provides powerful visual engine effects that allow you to shift colors, blur layers, adjust contrasts, and create high-fidelity UI styles directly inside your stylesheets.</p><h4>1. The <code>filter</code> Property</h4><p>Applies filters directly to the targeted element. Great for adjusting images or creating hover transitions: </p><pre><code>img { filter: grayscale(100%); }\nimg:hover { filter: grayscale(0%); }</code></pre><h4>2. The <code>backdrop-filter</code> Property</h4><p>Applies visual filters to the graphical layer **behind** the element instead of the element itself. This is the cornerstone of **Glassmorphism**:</p><pre><code>.glass {\n  background: rgba(255, 255, 255, 0.2);\n  backdrop-filter: blur(10px);\n}</code></pre><h4>Key Takeaways</h4><p>When creating a glassmorphism card, the element must have a **semi-transparent background** (using rgba or hsla). If the background is opaque, the backdrop blur remains hidden.</p>",
+    "initialCode": "<!DOCTYPE html>\n<html>\n<head>\n<style>\n  .bg { background: url('https://picsum.photos/800/600'); width: 100%; height: 300px; display: flex; align-items: center; justify-content: center; }\n  .glass {\n    background: rgba(255, 255, 255, 0.2);\n    backdrop-filter: blur(10px);\n    padding: 30px;\n    border-radius: 15px;\n    border: 1px solid rgba(255, 255, 255, 0.3);\n    color: white;\n    font-weight: bold;\n  }\n</style>\n</head>\n<body>\n  <div class=\"bg\">\n    <div class=\"glass\">Glassmorphism Effect</div>\n  </div>\n</body>\n</html>",
+    "quiz": [
+      {
+        "question": "Which property applies visual effects (like blur or grayscale) directly to the element itself?",
+        "options": [
+          "opacity",
+          "filter",
+          "backdrop-filter",
+          "blend-mode"
+        ],
+        "answer": 1
+      },
+      {
+        "question": "Which property applies visual effects to the elements and backgrounds directly *behind* the element?",
+        "options": [
+          "filter",
+          "shadow-blur",
+          "backdrop-filter",
+          "background-overlay"
+        ],
+        "answer": 2
+      },
+      {
+        "question": "What is the key visual requirement for a glassmorphism backdrop-blur effect to be visible?",
+        "options": [
+          "The element must have a fully solid background",
+          "The element must have a semi-transparent background color (e.g. rgba)",
+          "The element must have absolute positioning",
+          "The text must be styled in uppercase"
+        ],
+        "answer": 1
+      },
+      {
+        "question": "Which filter function shifts the colors of an element around the 360-degree color wheel?",
+        "options": [
+          "hue-rotate()",
+          "grayscale()",
+          "sepia()",
+          "invert()"
+        ],
+        "answer": 0
+      }
+    ],
+    "evaluationRules": {
+      "requiredTags": [
+        "body"
+      ]
+    }
   },
   {
     "title": "29. Responsive Design & Media Queries",
-    "content": "<p>Responsive web design makes your web pages look good on all devices (desktops, tablets, and phones). This is done using CSS Media Queries.</p><p>A media query applies a block of CSS only if a certain condition is true (e.g., the browser viewport is a certain width). The example below changes the flex direction from row to column on small screens, making the layout stack vertically.</p>",
-    "initialCode": "<!DOCTYPE html>\n<html>\n<head>\n  <style>\n    .container {\n      display: flex;\n      background: lightblue;\n      gap: 10px;\n      padding: 10px;\n    }\n    .box { flex: 1; padding: 20px; background: steelblue; color: white; text-align: center; border-radius: 5px; }\n\n    /* Media Query for screens 768px or less */\n    @media (max-width: 768px) {\n      .container {\n        flex-direction: column;\n      }\n    }\n  </style>\n</head>\n<body>\n  <p>Resize the browser window to see the layout change.</p>\n  <div class=\"container\">\n    <div class=\"box\">Box 1</div>\n    <div class=\"box\">Box 2</div>\n    <div class=\"box\">Box 3</div>\n  </div>\n</body>\n</html>"
+    "content": "<h3>Adapting to Any Screen Size</h3><p>Today, users visit websites using a massive range of viewports, from smartwatches and mobile phones to massive widescreen monitors. **Responsive Web Design** ensures your web pages render beautifully on all screens.</p><h4>Media Queries (<code>@media</code>)</h4><p>Media queries allow you to apply CSS rules only if specific viewport conditions are satisfied. For example, to stack content vertically on screens narrower than 768px:</p><pre><code>@media (max-width: 768px) {\n  .row {\n    flex-direction: column;\n  }\n}</code></pre><h4>The Viewport Meta Tag</h4><p>To make responsive styling work on mobile devices, you must declare this meta tag in your HTML's <code>&lt;head&gt;</code> to set screen dimensions correctly:</p><pre><code>&lt;meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\"&gt;</code></pre><h4>Key Takeaways</h4><p>Always build your styles with a **mobile-first** mindset. Write the base stylesheet to fit mobile devices perfectly by default, then add media queries at larger width breakpoints (e.g., `768px` for tablets, `1024px` for desktops).</p>",
+    "initialCode": "<!DOCTYPE html>\n<html>\n<head>\n  <style>\n    .container {\n      display: flex;\n      background: lightblue;\n      gap: 10px;\n      padding: 10px;\n    }\n    .box { flex: 1; padding: 20px; background: steelblue; color: white; text-align: center; border-radius: 5px; }\n\n    /* Media Query for screens 768px or less */\n    @media (max-width: 768px) {\n      .container {\n        flex-direction: column;\n      }\n    }\n  </style>\n</head>\n<body>\n  <p>Resize the browser window to see the layout change.</p>\n  <div class=\"container\">\n    <div class=\"box\">Box 1</div>\n    <div class=\"box\">Box 2</div>\n    <div class=\"box\">Box 3</div>\n  </div>\n</body>\n</html>",
+    "quiz": [
+      {
+        "question": "What is the primary objective of Responsive Web Design?",
+        "options": [
+          "To speed up images loading in browsers",
+          "To ensure web layouts render cleanly across all device viewport sizes",
+          "To block users from copying code on mobile devices",
+          "To compile CSS into variables"
+        ],
+        "answer": 1
+      },
+      {
+        "question": "Which CSS block directive is declared to write conditional styles for specific screen widths?",
+        "options": [
+          "@responsive",
+          "@media",
+          "@screen",
+          "@queries"
+        ],
+        "answer": 1
+      },
+      {
+        "question": "Why is the viewport '<meta>' tag vital inside the HTML '<head>'?",
+        "options": [
+          "It imports Google Fonts",
+          "It forces mobile devices to render layouts with native pixel scales instead of zooming out",
+          "It links CSS files together",
+          "It stores cookies"
+        ],
+        "answer": 1
+      },
+      {
+        "question": "What is a 'breakpoint' in responsive stylesheet design?",
+        "options": [
+          "A crash in the script compiler",
+          "A viewport boundary width where the layout styles change using media queries",
+          "An empty line between selectors",
+          "A device power state"
+        ],
+        "answer": 1
+      }
+    ],
+    "evaluationRules": {
+      "requiredTags": [
+        "body"
+      ]
+    }
   },
   {
     "title": "Part 5: Capstone Project",
@@ -166,8 +1543,20 @@
   },
   {
     "title": "30. Final Challenge: Landing Page",
-    "content": "<p>Congratulations on reaching the final challenge! Your task is to convert the design below into a fully functional HTML/CSS landing page. Use everything you've learned: Semantic HTML, Flexbox, Grid, and responsive design.</p><h3>Target Design:</h3><img src='./Code task/website_builder_landing_page.png' alt='Target Landing Page Design' style='width: 100%; border: 1px solid #ccc; margin-bottom: 20px;'><p>To help you, here are the direct links to the assets you should use in your code:</p><ul><li><strong>Logo:</strong> <code>./Code task/img-assets/logo.png</code></li><li><strong>Banner Image:</strong> <code>./Code task/img-assets/banner%20image.png</code></li></ul><p>Good luck!</p>",
+    "isCapstone": true,
+    "content": "<h3>Congratulations on Reaching the Capstone Challenge!</h3><p>You have successfully unlocked the ultimate final quest. In this capstone project, you will demonstrate your proficiency in semantic HTML structuring, modern CSS, typography, responsive grids, and professional-grade layout design.</p><h4>Your Objective</h4><p>Your task is to take the mockup target design below and convert it into a pixel-perfect, responsive HTML and CSS landing page.</p><h3>Mockup Target Design:</h3><img src='./Code task/website_builder_landing_page.png' alt='Target Landing Page Design' style='width: 100%; border: 1px solid #ccc; margin-bottom: 20px;'><p>To assist in your implementation, here are the absolute file paths to the design assets you must use:</p><ul><li><strong>Logo Asset:</strong> <code>./Code task/img-assets/logo.png</code></li><li><strong>Hero/Banner Media Asset:</strong> <code>./Code task/img-assets/banner%20image.png</code></li></ul><h4>Evaluation Focus</h4><p>Your output will be evaluated on spacing consistency (8dp rule), font selection, dark/light contrast parameters, semantic tag selection, and responsive fluidity on smaller viewports.</p><p>Good luck, Legend!</p>",
     "initialCode": "<!DOCTYPE html>\n<html>\n<head>\n  <title>My Landing Page</title>\n  <style>\n    /* Start your styling here */\n    body { font-family: sans-serif; margin: 0; padding: 0; }\n  </style>\n</head>\n<body>\n\n  <!-- 1. Use the logo: ./Code task/img-assets/logo.png -->\n  <!-- 2. Use the banner: ./Code task/img-assets/banner image.png -->\n\n</body>\n</html>",
-    "solutionCode": "<!DOCTYPE html>\n<html>\n<head>\n  <style>\n    :root { --primary: #6366f1; --dark: #1e293b; --light: #f8fafc; }\n    body { font-family: sans-serif; margin: 0; color: var(--dark); background: var(--light); line-height: 1.6; }\n    header { display: flex; justify-content: space-between; align-items: center; padding: 20px 5%; background: white; box-shadow: 0 2px 4px rgba(0,0,0,0.05); position: sticky; top: 0; z-index: 10; }\n    .logo img { height: 40px; }\n    nav a { margin-left: 25px; text-decoration: none; color: var(--dark); font-weight: 500; }\n    .hero { display: flex; align-items: center; padding: 60px 5%; gap: 50px; }\n    .hero-content { flex: 1; }\n    .hero-image { flex: 1; }\n    .hero-image img { width: 100%; border-radius: 12px; box-shadow: 0 20px 25px -5px rgba(0,0,0,0.1); }\n    h1 { font-size: 3rem; line-height: 1.1; margin-bottom: 20px; color: var(--primary); }\n    .btn { background: var(--primary); color: white; padding: 12px 28px; border-radius: 6px; text-decoration: none; display: inline-block; font-weight: 600; }\n    .features { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 30px; padding: 80px 5%; }\n    .feature-card { background: white; padding: 30px; border-radius: 10px; border: 1px solid #e2e8f0; }\n    @media (max-width: 768px) { \n      .hero { flex-direction: column; text-align: center; } \n      h1 { font-size: 2.5rem; } \n      nav { display: none; } \n    }\n  </style>\n</head>\n<body>\n  <header>\n    <div class=\"logo\"><img src='./Code task/img-assets/logo.png' alt='Logo'></div>\n    <nav><a href='#'>Features</a><a href='#'>Pricing</a><a href='#' class=\"btn\">Get Started</a></nav>\n  </header>\n  <section class=\"hero\">\n    <div class=\"hero-content\">\n      <h1>Build your dream website in minutes.</h1>\n      <p>The most powerful website builder for creators and entrepreneurs. No coding required.</p>\n      <a href='#' class=\"btn\">Start Building</a>\n    </div>\n    <div class=\"hero-image\"><img src='./Code task/img-assets/banner%20image.png' alt='Banner'></div>\n  </section>\n  <section class=\"features\">\n    <div class=\"feature-card\"><h3>Drag & Drop</h3><p>Intuitive interface to build sections effortlessly.</p></div>\n    <div class=\"feature-card\"><h3>Responsive</h3><p>Your site looks perfect on every device automatically.</p></div>\n    <div class=\"feature-card\"><h3>Fast Hosting</h3><p>Lightning fast loading speeds for your visitors.</p></div>\n  </section>\n</body>\n</html>"
+    "solutionCode": "<!DOCTYPE html>\n<html>\n<head>\n  <style>\n    :root { --primary: #6366f1; --dark: #1e293b; --light: #f8fafc; }\n    body { font-family: sans-serif; margin: 0; color: var(--dark); background: var(--light); line-height: 1.6; }\n    header { display: flex; justify-content: space-between; align-items: center; padding: 20px 5%; background: white; box-shadow: 0 2px 4px rgba(0,0,0,0.05); position: sticky; top: 0; z-index: 10; }\n    .logo img { height: 40px; }\n    nav a { margin-left: 25px; text-decoration: none; color: var(--dark); font-weight: 500; }\n    .hero { display: flex; align-items: center; padding: 60px 5%; gap: 50px; }\n    .hero-content { flex: 1; }\n    .hero-image { flex: 1; }\n    .hero-image img { width: 100%; border-radius: 12px; box-shadow: 0 20px 25px -5px rgba(0,0,0,0.1); }\n    h1 { font-size: 3rem; line-height: 1.1; margin-bottom: 20px; color: var(--primary); }\n    .btn { background: var(--primary); color: white; padding: 12px 28px; border-radius: 6px; text-decoration: none; display: inline-block; font-weight: 600; }\n    .features { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 30px; padding: 80px 5%; }\n    .feature-card { background: white; padding: 30px; border-radius: 10px; border: 1px solid #e2e8f0; }\n    @media (max-width: 768px) { \n      .hero { flex-direction: column; text-align: center; } \n      h1 { font-size: 2.5rem; } \n      nav { display: none; } \n    }\n  </style>\n</head>\n<body>\n  <header>\n    <div class=\"logo\"><img src='./Code task/img-assets/logo.png' alt='Logo'></div>\n    <nav><a href='#'>Features</a><a href='#'>Pricing</a><a href='#' class=\"btn\">Get Started</a></nav>\n  </header>\n  <section class=\"hero\">\n    <div class=\"hero-content\">\n      <h1>Build your dream website in minutes.</h1>\n      <p>The most powerful website builder for creators and entrepreneurs. No coding required.</p>\n      <a href='#' class=\"btn\">Start Building</a>\n    </div>\n    <div class=\"hero-image\"><img src='./Code task/img-assets/banner%20image.png' alt='Banner'></div>\n  </section>\n  <section class=\"features\">\n    <div class=\"feature-card\"><h3>Drag & Drop</h3><p>Intuitive interface to build sections effortlessly.</p></div>\n    <div class=\"feature-card\"><h3>Responsive</h3><p>Your site looks perfect on every device automatically.</p></div>\n    <div class=\"feature-card\"><h3>Fast Hosting</h3><p>Lightning fast loading speeds for your visitors.</p></div>\n  </section>\n</body>\n</html>",
+    "evaluationRules": {
+      "requiredTags": [
+        "header",
+        "section",
+        "img",
+        "a",
+        "h1",
+        "p",
+        "style"
+      ]
+    }
   }
 ]

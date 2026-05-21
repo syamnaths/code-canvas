@@ -4,22 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Help - CodeCanvas</title>
-    <script src="https://cdn.tailwindcss.com/3.4.1"></script>
+    <link rel="icon" href="data:,">
+    <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="../assets/css/style.css">
-    <script>
-      tailwind.config = {
-        theme: {
-          extend: {
-            fontFamily: {
-              sans: ['Inter', 'sans-serif'],
-            },
-          }
-        }
-      }
-    </script>
 </head>
 <body class="bg-slate-50 text-slate-800 flex flex-col h-full antialiased">
 
@@ -53,22 +43,24 @@
                     <article class="prose prose-slate mt-4">
                         <p>Welcome to CodeCanvas! Using the platform is straightforward:</p>
                         <ol>
-                            <li><strong>Select a Lesson:</strong> Choose a topic from the navigation sidebar on the left.</li>
-                            <li><strong>Read the Content:</strong> The lesson's explanation and instructions will appear in the main content area.</li>
-                            <li><strong>Practice Your Code:</strong> Use the "HTML & CSS Editor" to write your code. The initial code for the lesson is loaded for you automatically.</li>
-                            <li><strong>See Instant Results:</strong> Your code's output will render instantly in the "Live Preview" panel on the right.</li>
+                            <li><strong>Choose Your Course:</strong> Use the dropdown in the sidebar to switch between different learning paths (e.g., HTML/CSS or JavaScript).</li>
+                            <li><strong>Select a Lesson:</strong> Choose a topic from the navigation sidebar.</li>
+                            <li><strong>Read and Learn:</strong> Study the content provided in the main area.</li>
+                            <li><strong>Pass the Quiz:</strong> Each lesson has a topic quiz. You must score at least 70% to unlock the interactive playground.</li>
+                            <li><strong>Practice Your Code:</strong> Once unlocked, use the editor to experiment. Your results appear instantly in the live preview.</li>
                         </ol>
                     </article>
                 </section>
 
                 <!-- Features Section -->
                 <section class="bg-white p-6 rounded-lg shadow-sm ring-1 ring-slate-900/5">
-                    <h3 class="text-xl font-semibold text-slate-900 border-b border-slate-200 pb-3">Features</h3>
+                    <h3 class="text-xl font-semibold text-slate-900 border-b border-slate-200 pb-3">Key Features</h3>
                      <article class="prose prose-slate mt-4">
                         <ul>
-                            <li><strong>Interactive Editor:</strong> A split-screen view allows you to code and see your changes in real-time without leaving the page.</li>
-                            <li><strong>Dynamic Lessons:</strong> All lessons are loaded from a central <code>lessons.json</code> file, making the course content easy to update and expand.</li>
-                            <li><strong>Modern UI:</strong> Built with Tailwind CSS for a clean, responsive, and modern user interface that works on any device.</li>
+                            <li><strong>Smart Live Preview:</strong> Our preview engine intelligently handles both code snippets and full HTML documents.</li>
+                            <li><strong>Progress Tracking:</strong> Your quiz results and capstone project code are automatically saved to your browser's local storage.</li>
+                            <li><strong>Curriculum Switching:</strong> Easily toggle between multiple courses without losing your place.</li>
+                            <li><strong>Data Portability:</strong> Use the Preferences page to export your entire progress as a JSON file and restore it on another device.</li>
                         </ul>
                     </article>
                 </section>
@@ -78,12 +70,12 @@
                     <h3 class="text-xl font-semibold text-slate-900 border-b border-slate-200 pb-3">Frequently Asked Questions</h3>
                     <div class="mt-4 space-y-4">
                         <div>
-                            <h4 class="font-medium text-slate-800">Can I add my own lessons?</h4>
-                            <p class="text-sm text-slate-600 mt-1">Yes! You can edit the <code>assets/data/lessons.json</code> file directly. Simply copy the format of an existing lesson (title, content, initialCode) to add your own content.</p>
+                            <h4 class="font-medium text-slate-800">Why is the Practice Ground locked?</h4>
+                            <p class="text-sm text-slate-600 mt-1">To ensure you understand the core concepts, we require a passing score (70%+) on the topic quiz before you can start coding.</p>
                         </div>
                         <div class="pt-4 border-t border-slate-100">
                             <h4 class="font-medium text-slate-800">Is my code saved?</h4>
-                            <p class="text-sm text-slate-600 mt-1">Your code in the editor is not saved automatically between sessions in this version. Use the features on the <strong>Preferences</strong> page to export your lesson file if you want to save your progress.</p>
+                            <p class="text-sm text-slate-600 mt-1">Yes! Your progress and capstone project code are saved locally. However, clearing your browser data will erase this. Use the <strong>Export JSON</strong> feature on the Preferences page for long-term backups.</p>
                         </div>
                     </div>
                 </section>

@@ -4,22 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Preferences - CodeCanvas</title>
-    <script src="https://cdn.tailwindcss.com/3.4.1"></script>
+    <link rel="icon" href="data:,">
+    <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="../assets/css/style.css">
-    <script>
-      tailwind.config = {
-        theme: {
-          extend: {
-            fontFamily: {
-              sans: ['Inter', 'sans-serif'],
-            },
-          }
-        }
-      }
-    </script>
 </head>
 <body class="bg-slate-50 text-slate-800 flex flex-col h-full antialiased">
 
@@ -47,39 +37,32 @@
             </div>
 
             <div class="space-y-8">
-                <!-- File Backup & Sync Section -->
+                <!-- Local Data Management Section -->
                 <section class="bg-white p-6 rounded-lg shadow-sm ring-1 ring-slate-900/5">
-                    <h3 class="text-xl font-semibold text-slate-900 border-b border-slate-200 pb-3">File Backup & Sync</h3>
+                    <h3 class="text-xl font-semibold text-slate-900 border-b border-slate-200 pb-3">Local Data Management</h3>
                     <div class="mt-4 space-y-4">
                         <div class="flex items-center justify-between">
                             <div>
-                                <h4 class="font-medium text-slate-800">Auto-Save Lessons</h4>
-                                <p class="text-sm text-slate-500">Automatically save your progress to a local backup file.</p>
+                                <h4 class="font-medium text-slate-800">Clear All Progress</h4>
+                                <p class="text-sm text-slate-500">Reset your passed quizzes and autosaved code across all courses.</p>
                             </div>
-                            <button class="px-4 py-2 text-sm font-medium text-white bg-indigo-600 rounded-md hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">Choose File</button>
-                        </div>
-                        <div class="flex items-center justify-between pt-4 border-t border-slate-200">
-                             <div>
-                                <h4 class="font-medium text-slate-800">Forget Backup File</h4>
-                                <p class="text-sm text-slate-500">Disconnect the currently selected auto-save file.</p>
-                            </div>
-                            <button class="px-4 py-2 text-sm font-medium text-slate-700 bg-slate-100 rounded-md hover:bg-slate-200 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-slate-500">Forget</button>
+                            <button class="px-4 py-2 text-sm font-medium text-red-600 bg-red-50 rounded-md hover:bg-red-100 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-red-500">Reset Progress</button>
                         </div>
                     </div>
                 </section>
 
                 <!-- Import / Export Section -->
                 <section class="bg-white p-6 rounded-lg shadow-sm ring-1 ring-slate-900/5">
-                    <h3 class="text-xl font-semibold text-slate-900 border-b border-slate-200 pb-3">Import / Export</h3>
+                    <h3 class="text-xl font-semibold text-slate-900 border-b border-slate-200 pb-3">Backup & Restore</h3>
                     <div class="mt-4 grid grid-cols-1 md:grid-cols-2 gap-6">
                         <div>
-                            <h4 class="font-medium text-slate-800">Export Lessons</h4>
-                            <p class="text-sm text-slate-500 mb-2">Save all current lessons as a single <code>lessons.json</code> file.</p>
-                            <button class="w-full px-4 py-2 text-sm font-medium text-white bg-blue-600 rounded-md hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500">Export JSON</button>
+                            <h4 class="font-medium text-slate-800">Export Progress</h4>
+                            <p class="text-sm text-slate-500 mb-2">Save your current quiz results and project code as a <code>.json</code> file.</p>
+                            <button class="w-full px-4 py-2 text-sm font-medium text-white bg-indigo-600 rounded-md hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">Export JSON</button>
                         </div>
                         <div>
-                            <h4 class="font-medium text-slate-800">Import Lessons</h4>
-                            <p class="text-sm text-slate-500 mb-2">Load lessons from a <code>lessons.json</code> file. This will overwrite current lessons.</p>
+                            <h4 class="font-medium text-slate-800">Import Progress</h4>
+                            <p class="text-sm text-slate-500 mb-2">Restore your progress from a previously exported <code>.json</code> file.</p>
                             <button class="w-full px-4 py-2 text-sm font-medium text-slate-700 bg-slate-100 rounded-md hover:bg-slate-200 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-slate-500">Import JSON</button>
                         </div>
                     </div>
@@ -88,5 +71,6 @@
         </div>
     </main>
 
+    <script src="../assets/js/preferences.js"></script>
 </body>
 </html>
